@@ -1,0 +1,35 @@
+<svg viewBox="0 0 500 180" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+    
+    .logo-text {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+      font-size: 72px;
+      fill: #0a2240;
+      letter-spacing: -1px;
+    }
+    .logo-highlight {
+      fill: #0052cc;
+    }
+    .bolt {
+      fill: #0052cc;
+    }
+    .tagline {
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      fill: #444;
+      letter-spacing: 2px;
+    }
+  </style>
+  
+  <!-- Lightning Bolt Icon -->
+  <path class="bolt" d="M75,30 L40,95 L65,95 L30,150 L105,65 L75,70 L75,30 Z" />
+  
+  <!-- Company Name -->
+  <text x="115" y="105" class="logo-text">Tech<tspan class="logo-highlight">Nest</tspan></text>
+  
+  <!-- Optional Tagline -->
+  <text x="118" y="135" class="tagline">PREMIUM TECH GADGETS</text>
+</svg>

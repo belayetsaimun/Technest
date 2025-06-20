@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNest - Contact Us</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <meta name="theme-color" content="#0052cc">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="tech-theme">
+    <!-- Enhanced Theme Toggle -->
+    <div class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+        <span class="toggle-tooltip">Switch to Dark Mode</span>
+    </div>
+
+    <!-- Header with Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <div class="logo-text">
+                        <div class="bolt-icon"><i class="fas fa-bolt"></i></div>
+                        <span class="tech">Tech</span><span class="nest">Nest</span>
+                    </div>
+                </a>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" id="closeMenu"></i>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="products.html"><i class="fas fa-shopping-bag"></i> Products</a></li>
+                    <li><a href="categories.html"><i class="fas fa-th-large"></i> Categories</a></li>
+                    <li><a href="new-arrivals.html"><i class="fas fa-star"></i> New Arrivals</a></li>
+                    <li><a href="deals.html"><i class="fas fa-tag"></i> Deals</a></li>
+                    <li><a href="contact.html" class="active"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-actions">
+                <form class="search-container" id="searchForm">
+                    <input type="text" placeholder="Search products..." class="search-input">
+                    <button type="submit" class="search-btn"><i class="fas fa-search"></i></button>
+                </form>
+               
+                <a href="auth.html" class="account tooltip-container">
+                    <i class="fas fa-user"></i>
+                    <span class="tooltip">Account</span>
+                </a>
+                <a href="#" class="wishlist tooltip-container" id="wishlistBtn">
+                    <i class="fas fa-heart"></i>
+                    <span class="wishlist-count">0</span>
+                    <span class="tooltip">Wishlist</span>
+                </a>
+                <a href="#" class="cart tooltip-container" id="cartBtn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                    <span class="tooltip">Cart</span>
+                </a>
+            </div>
+            <i class="fas fa-bars" id="menuIcon"></i>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li class="active"><i class="fas fa-envelope"></i> Contact Us</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+        <div class="hero-backdrop"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="tech-badge">GET IN TOUCH</div>
+                <h1>Contact <span class="gradient-text">TechNest</span></h1>
+                <p class="hero-description">We're here to help you with all your tech needs. Get in touch with our expert team for support, inquiries, or feedback.</p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Support</span>
+                        </div>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">50K+</span>
+                            <span class="stat-label">Happy Customers</span>
+                        </div>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="stat-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">99%</span>
+                            <span class="stat-label">Satisfaction Rate</span>
+                        </div>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+                        <div class="stat-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">&lt;2hr</span>
+                            <span class="stat-label">Response Time</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information Cards -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Ways to Reach Us</h2>
+                <p>Choose the most convenient way to get in touch with our team</p>
+            </div>
+            
+            <div class="contact-info-grid">
+                <div class="contact-info-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Visit Our Store</h3>
+                        <p>SASH, CUET, Raozan-4349<br>Chattogram, Bangladesh</p>
+                        <a href="#" class="card-link">Get Directions <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="card-glow"></div>
+                </div>
+                
+                <div class="contact-info-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Call Us Direct</h3>
+                        <p>+8801581448561<br>+8801713661234</p>
+                        <a href="tel:+8801581448561" class="card-link">Call Now <i class="fas fa-phone"></i></a>
+                    </div>
+                    <div class="card-glow"></div>
+                </div>
+                
+                <div class="contact-info-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Email Support</h3>
+                        <p>support@technest.com<br>info@technest.com</p>
+                        <a href="mailto:support@technest.com" class="card-link">Send Email <i class="fas fa-paper-plane"></i></a>
+                    </div>
+                    <div class="card-glow"></div>
+                </div>
+                
+                <div class="contact-info-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Business Hours</h3>
+                        <p>Mon - Sat: 9:00 AM - 7:00 PM<br>Sunday: 10:00 AM - 5:00 PM</p>
+                        <a href="#" class="card-link">View Schedule <i class="fas fa-calendar"></i></a>
+                    </div>
+                    <div class="card-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form & Map Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-container" data-aos="fade-right">
+                    <div class="form-header">
+                        <div class="tech-badge">SEND MESSAGE</div>
+                        <h2>Get In Touch</h2>
+                        <p>Have a question or need assistance? Send us a message and we'll get back to you within 24 hours.</p>
+                    </div>
+                    
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-envelope"></i>
+                                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-phone"></i>
+                                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-tag"></i>
+                                    <select id="subject" name="subject" required>
+                                        <option value="">Select a subject</option>
+                                        <option value="general">General Inquiry</option>
+                                        <option value="support">Technical Support</option>
+                                        <option value="billing">Billing Question</option>
+                                        <option value="feedback">Feedback</option>
+                                        <option value="partnership">Partnership</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message <span class="required">*</span></label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-comment"></i>
+                                <textarea id="message" name="message" rows="6" placeholder="Tell us how we can help you..." required></textarea>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn primary-btn submit-btn">
+                                <i class="fas fa-paper-plane"></i>
+                                <span>Send Message</span>
+                                <div class="btn-loader">
+                                    <i class="fas fa-spinner fa-spin"></i>
+                                </div>
+                            </button>
+                            <button type="reset" class="btn secondary-btn reset-btn">
+                                <i class="fas fa-undo"></i> Reset Form
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Interactive Map -->
+                <div class="contact-map-container" data-aos="fade-left">
+                    <div class="map-header">
+                        <h3>Find Us Here</h3>
+                        <p>Visit our store for hands-on product experience</p>
+                    </div>
+                    <div class="contact-map">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.2119604063824!2d91.90969141540359!3d22.641456385133788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3754a65f89aea3b7%3A0x932dd9dcd97b9f7d!2sChittagong%20University%20of%20Engineering%20%26%20Technology!5e0!3m2!1sen!2sbd!4v1651581241303!5m2!1sen!2sbd" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="map-overlay">
+                            <div class="location-pin">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-actions">
+                        <a href="#" class="map-btn">
+                            <i class="fas fa-directions"></i> Get Directions
+                        </a>
+                        <a href="#" class="map-btn">
+                            <i class="fas fa-street-view"></i> Street View
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="tech-badge">FAQ</div>
+                <h2>Frequently Asked Questions</h2>
+                <p>Find quick answers to the most common questions about our products and services</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-categories">
+                    <button class="faq-category-btn active" data-category="general">
+                        <i class="fas fa-info-circle"></i> General
+                    </button>
+                    <button class="faq-category-btn" data-category="shipping">
+                        <i class="fas fa-shipping-fast"></i> Shipping
+                    </button>
+                    <button class="faq-category-btn" data-category="returns">
+                        <i class="fas fa-undo"></i> Returns
+                    </button>
+                    <button class="faq-category-btn" data-category="support">
+                        <i class="fas fa-headset"></i> Support
+                    </button>
+                </div>
+
+                <div class="faq-content">
+                    <!-- General FAQs -->
+                    <div class="faq-category-content active" data-category="general">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>What makes TechNest different from other tech retailers?</h3>
+                                <div class="faq-toggle">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                            </div>
+                            <div class="faq-answer">
+                                <p>TechNest offers premium quality tech products at competitive prices with exceptional customer service. We provide 2-year warranty on all products, free shipping on orders over ৳5,000, and 24/7 technical support.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Do you offer warranty on your products?</h3>
+                                <div class="faq-toggle">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, all our products come with at least a 1-year manufacturer's warranty. Many of our premium products include an extended 2-year TechNest warranty at no extra cost. Additional extended warranty options are available for purchase during checkout.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>What payment methods do you accept?</h3>
+                                <div class="faq-toggle">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We accept various payment methods including credit/debit cards (Visa, MasterCard, American Express), mobile banking (bKash, Nagad, Rocket), and cash on delivery. All online payments are securely processed with industry-standard encryption.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Shipping FAQs -->
+                    <div class="faq-category-content" data-category="shipping">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>What are your shipping options and costs?</h3>
+                                <div class="faq-toggle">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We offer free standard shipping on all orders over ৳5,000. Standard shipping typically takes 3-5 business days. Express shipping is available for ৳500 and delivers within 1-2 business days. International shipping rates vary depending on the destination.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>How can I track my order?</h3>
+                                <div class="faq-toggle">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Once your order ships, you'll receive a confirmation email with tracking information. You can also log into your TechNest account and view your order status in the "My Orders" section. Our tracking system updates in real-time to provide you with the most current information.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Returns FAQs -->
+                    <div class="faq-category-content" data-category="returns">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>What is your return policy?</h3>
+                                <div class="faq-toggle">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We offer a 30-day return policy on most items. Products must be in their original condition with all packaging and accessories. Some items like earbuds and custom-configured devices may have different return policies. Please see our Returns page for complete details.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>How do I initiate a return?</h3>
+                                <div class="faq-toggle">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                            </div>
+                            <div class="faq-answer">
+                                <p>To initiate a return, log into your account and go to "My Orders". Select the order you want to return and click "Return Item". Follow the instructions to print a return label and package your item securely.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Support FAQs -->
+                    <div class="faq-category-content" data-category="support">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>How can I get technical support?</h3>
+                                <div class="faq-toggle">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Our technical support team is available 24/7 via phone, email, or live chat. You can also access our knowledge base and video tutorials on our support page for common issues and setup guides.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-cta">
+                <p>Can't find what you're looking for?</p>
+                <a href="#contactForm" class="btn primary-btn">Contact Support <i class="fas fa-arrow-down"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <a href="index.html">
+                        <div class="logo-text footer-logo-text">
+                            <div class="bolt-icon"><i class="fas fa-bolt"></i></div>
+                            <span class="tech">Tech</span><span class="nest">Nest</span>
+                        </div>
+                    </a>
+                </div>
+                <p>Premium tech gadgets at affordable prices. Experience innovation without breaking the bank.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Shop</h3>
+                <ul>
+                    <li><a href="category.html?category=phones">Mobile Phones</a></li>
+                    <li><a href="category.html?category=headphones">Headphones</a></li>
+                    <li><a href="category.html?category=earbuds">Earbuds</a></li>
+                    <li><a href="category.html?category=laptops">Laptops</a></li>
+                    <li><a href="category.html?category=smartwatches">Smartwatches</a></li>
+                    <li><a href="category.html?category=tablets">Tablets</a></li>
+                    <li><a href="category.html?category=accessories">Accessories</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="shipping.html">Shipping & Returns</a></li>
+                    <li><a href="warranty.html">Warranty</a></li>
+                    <li><a href="repair.html">Repair Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="press.html">Press</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> SASH, CUET, Raozan-4349, Chattogram</li>
+                    <li><i class="fas fa-phone"></i> +8801581448561</li>
+                    <li><i class="fas fa-envelope"></i> support@technest.com</li>
+                </ul>
+                <div class="payment-methods">
+                    <span class="payment-icon bkash">bKash</span>
+                    <span class="payment-icon nagad">Nagad</span>
+                    <span class="payment-icon rocket">Rocket</span>
+                    <i class="fab fa-cc-visa"></i>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TechNest. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> Your Cart</h3>
+            <span class="close-cart">&times;</span>
+        </div>
+        <div class="cart-items">
+            <div class="empty-cart">
+                <div class="empty-cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <p>Your cart is empty</p>
+                <a href="products.html" class="btn secondary-btn">Start Shopping</a>
+            </div>
+        </div>
+        <div class="cart-summary">
+            <div class="summary-row">
+                <span>Subtotal:</span>
+                <span class="cart-subtotal">৳0.00</span>
+            </div>
+            <div class="summary-row">
+                <span>Shipping:</span>
+                <span class="cart-shipping">৳0.00</span>
+            </div>
+            <div class="summary-row total">
+                <span>Total:</span>
+                <span class="cart-total">৳0.00</span>
+            </div>
+            <a href="checkout.html" class="btn primary-btn checkout-btn">Proceed to Checkout</a>
+            <button class="btn secondary-btn continue-shopping">Continue Shopping</button>
+        </div>
+    </div>
+    
+    <!-- Wishlist Sidebar -->
+    <div class="wishlist-sidebar" id="wishlistSidebar">
+        <div class="wishlist-header">
+            <h3><i class="fas fa-heart"></i> Your Wishlist</h3>
+            <span class="close-wishlist">&times;</span>
+        </div>
+        <div class="wishlist-items">
+            <div class="empty-wishlist">
+                <div class="empty-wishlist-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <p>Your wishlist is empty</p>
+                <a href="products.html" class="btn secondary-btn">Discover Products</a>
+            </div>
+        </div>
+        <div class="wishlist-actions">
+            <button class="btn primary-btn clear-wishlist-btn">Clear Wishlist</button>
+        </div>
+    </div>
+    
+    <!-- Success Message Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content success-modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="success-message">
+                <div class="success-animation">
+                    <div class="checkmark">
+                        <i class="fas fa-check"></i>
+                    </div>
+                </div>
+                <h2>Message Sent Successfully!</h2>
+                <p>Thank you for contacting us. We've received your message and will get back to you within 24 hours.</p>
+                <div class="success-actions">
+                    <button class="btn primary-btn close-success-btn">Perfect!</button>
+                    <button class="btn secondary-btn send-another-btn">Send Another Message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Sending your message...</p>
+        </div>
+    </div>
+    
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>

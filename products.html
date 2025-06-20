@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNest - Premium Tech Collection</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <meta name="theme-color" content="#0052cc">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="tech-theme">
+
+    <!-- Header with Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <div class="logo-text">
+                        <div class="bolt-icon"><i class="fas fa-bolt"></i></div>
+                        <span class="tech">Tech</span><span class="nest">Nest</span>
+                    </div>
+                </a>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" id="closeMenu"></i>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="products.html" class="active"><i class="fas fa-shopping-bag"></i> Products</a></li>
+                    <li><a href="categories.html"><i class="fas fa-th-large"></i> Categories</a></li>
+                    <li><a href="new-arrivals.html"><i class="fas fa-star"></i> New Arrivals</a></li>
+                    <li><a href="deals.html"><i class="fas fa-tag"></i> Deals</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-actions">
+                <form class="search-container" id="searchForm">
+                    <input type="text" placeholder="Search products..." class="search-input">
+                    <button type="submit" class="search-btn"><i class="fas fa-search"></i></button>
+                </form>
+               
+                <a href="auth.html" class="account tooltip-container">
+                    <i class="fas fa-user"></i>
+                    <span class="tooltip">Account</span>
+                </a>
+                <a href="wishlist.html" class="wishlist tooltip-container" id="wishlistBtn">
+                    <i class="fas fa-heart"></i>
+                    <span class="wishlist-count">0</span>
+                    <span class="tooltip">Wishlist</span>
+                </a>
+                <a href="cart.html" class="cart tooltip-container" id="cartBtn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                    <span class="tooltip">Cart</span>
+                </a>
+            </div>
+            <i class="fas fa-bars" id="menuIcon"></i>
+        </nav>
+    </header>
+
+    <!-- Enhanced Hero Section for Products -->
+    <section class="products-hero">
+        <div class="products-hero-container">
+            <div class="products-hero-content">
+                <div class="tech-badge">PREMIUM COLLECTION</div>
+                <h1>Discover Premium Tech</h1>
+                <h2 class="gradient-text">Innovation Meets Excellence</h2>
+                <p class="hero-description">Explore our curated collection of cutting-edge technology. From smartphones to smart homes, find the perfect tech companion for your digital lifestyle.</p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Products</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Brands</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Support</div>
+                    </div>
+                </div>
+            </div>
+            <div class="products-hero-visual">
+                <div class="floating-products">
+                    <div class="floating-product floating-product-1">
+                        <img src="images/iphone16W.png" alt="iPhone">
+                    </div>
+                    <div class="floating-product floating-product-2">
+                        <img src="images/macbookW.png" alt="MacBook">
+                    </div>
+                    <div class="floating-product floating-product-3">
+                        <img src="images/appwatch.png" alt="Apple Watch">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-backdrop"></div>
+    </section>
+
+    <!-- Enhanced Filters Section -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters-header">
+                <h3><i class="fas fa-filter"></i> Filter & Sort</h3>
+                <div class="results-count">
+                    <span id="results-count">18 Products Found</span>
+                </div>
+            </div>
+            
+            <div class="enhanced-filters">
+                <div class="filter-group">
+                    <label for="sort-by"><i class="fas fa-sort"></i> Sort By</label>
+                    <select id="sort-by" class="filter-select">
+                        <option value="popularity">Most Popular</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                        <option value="newest">Newest First</option>
+                        <option value="rating">Top Rated</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="category-filter"><i class="fas fa-th-large"></i> Category</label>
+                    <select id="category-filter" class="filter-select">
+                        <option value="all">All Categories</option>
+                        <option value="phones">Smartphones</option>
+                        <option value="laptops">Laptops</option>
+                        <option value="tablets">Tablets</option>
+                        <option value="headphones">Headphones</option>
+                        <option value="earbuds">Earbuds</option>
+                        <option value="smartwatches">Smartwatches</option>
+                        <option value="cameras">Cameras</option>
+                        <option value="gaming">Gaming</option>
+                        <option value="accessories">Accessories</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="price-range"><i class="fas fa-tag"></i> Price Range</label>
+                    <select id="price-range" class="filter-select">
+                        <option value="all">All Prices</option>
+                        <option value="0-10000">Under ৳10,000</option>
+                        <option value="10000-25000">৳10,000 - ৳25,000</option>
+                        <option value="25000-50000">৳25,000 - ৳50,000</option>
+                        <option value="50000-100000">৳50,000 - ৳100,000</option>
+                        <option value="100000+">Over ৳100,000</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="brand-filter"><i class="fas fa-star"></i> Brand</label>
+                    <select id="brand-filter" class="filter-select">
+                        <option value="all">All Brands</option>
+                        <option value="apple">Apple</option>
+                        <option value="samsung">Samsung</option>
+                        <option value="sony">Sony</option>
+                        <option value="canon">Canon</option>
+                        <option value="dell">Dell</option>
+                        <option value="anker">Anker</option>
+                        <option value="lg">LG</option>
+                        <option value="logitech">Logitech</option>
+                        <option value="nintendo">Nintendo</option>
+                        <option value="google">Google</option>
+                    </select>
+                </div>
+                
+                <button id="reset-filters" class="btn secondary-btn">
+                    <i class="fas fa-undo"></i> Reset All
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Products Grid -->
+    <section class="products-showcase">
+        <div class="container">
+            <div class="enhanced-product-grid">
+                <!-- Smartphones -->
+                <div class="product-card premium-card" data-id="1" data-name="iPhone 16 Pro Max" data-price="219999" data-image="images/iphone16W.png" data-category="phones" data-brand="apple" data-rating="4.8">
+                    <div class="product-badge new-badge">New</div>
+                    <div class="product-image">
+                        <img src="images/iphone16W.png" alt="iPhone 16 Pro Max">
+                        <div class="product-actions">
+                            <a href="#" class="quick-view tooltip-container">
+                                <i class="fas fa-eye"></i>
+                                <span class="tooltip">Quick View</span>
+                            </a>
+                            <a href="#" class="add-to-wishlist tooltip-container">
+                                <i class="far fa-heart"></i>
+                                <span class="tooltip">Add to Wishlist</span>
+                            </a>
+                            <a href="#" class="add-to-cart tooltip-container">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="tooltip">Add to Cart</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Smartphones</div>
+                        <h3>iPhone 16 Pro Max</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(1,247)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">৳219,999</span>
+                            <span class="old-price">৳225,999</span>
+                        </div>
+                        <div class="product-highlights">
+                            <span>A17 Pro</span>
+                            <span>48MP Camera</span>
+                            <span>6.7" Display</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-id="2" data-name="Samsung Galaxy S24 Ultra" data-price="179999" data-image="images/samsung-galaxyW.png" data-category="phones" data-brand="samsung" data-rating="4.7">
+                    <div class="product-badge bestseller">Bestseller</div>
+                    <div class="product-image">
+                        <img src="images/samsung-galaxyW.png" alt="Samsung Galaxy S24 Ultra">
+                        <div class="product-actions">
+                            <a href="#" class="quick-view tooltip-container">
+                                <i class="fas fa-eye"></i>
+                                <span class="tooltip">Quick View</span>
+                            </a>
+                            <a href="#" class="add-to-wishlist tooltip-container">
+                                <i class="far fa-heart"></i>
+                                <span class="tooltip">Add to Wishlist</span>
+                            </a>
+                            <a href="#" class="add-to-cart tooltip-container">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="tooltip">Add to Cart</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Smartphones</div>
+                        <h3>Samsung Galaxy S24 Ultra</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(956)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">৳179,999</span>
+                            <span class="old-price">৳189,999</span>
+                        </div>
+                        <div class="product-highlights">
+                            <span>200MP Camera</span>
+                            <span>S Pen</span>
+                            <span>AI Features</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Audio Products -->
+                <div class="product-card" data-id="3" data-name="AirPods Pro (3rd Gen)" data-price="21499" data-image="images/airpods proW.png" data-category="earbuds" data-brand="apple" data-rating="4.6">
+                    <div class="product-badge new-badge">New</div>
+                    <div class="product-image">
+                        <img src="images/airpods proW.png" alt="AirPods Pro">
+                        <div class="product-actions">
+                            <a href="#" class="quick-view tooltip-container">
+                                <i class="fas fa-eye"></i>
+                                <span class="tooltip">Quick View</span>
+                            </a>
+                            <a href="#" class="add-to-wishlist tooltip-container">
+                                <i class="far fa-heart"></i>
+                                <span class="tooltip">Add to Wishlist</span>
+                            </a>
+                            <a href="#" class="add-to-cart tooltip-container">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="tooltip">Add to Cart</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Audio</div>
+                        <h3>AirPods Pro (3rd Gen)</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(823)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">৳21,499</span>
+                            <span class="old-price">৳24,999</span>
+                        </div>
+                        <div class="product-highlights">
+                            <span>Active ANC</span>
+                            <span>Spatial Audio</span>
+                            <span>USB-C</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-id="4" data-name="Sony WH-1000XM5" data-price="35999" data-image="images/headphone1.png" data-category="headphones" data-brand="sony" data-rating="4.8">
+                    <div class="product-badge bestseller">Bestseller</div>
+                    <div class="product-image">
+                        <img src="images/headphone1.png" alt="Sony WH-1000XM5">
+                        <div class="product-actions">
+                            <a href="#" class="quick-view tooltip-container">
+                                <i class="fas fa-eye"></i>
+                                <span class="tooltip">Quick View</span>
+                            </a>
+                            <a href="#" class="add-to-wishlist tooltip-container">
+                                <i class="far fa-heart"></i>
+                                <span class="tooltip">Add to Wishlist</span>
+                            </a>
+                            <a href="#" class="add-to-cart tooltip-container">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="tooltip">Add to Cart</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Audio</div>
+                        <h3>Sony WH-1000XM5</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(1,156)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">৳35,999</span>
+                            <span class="old-price">৳39,999</span>
+                        </div>
+                        <div class="product-highlights">
+                            <span>30h Battery</span>
+                            <span>Hi-Res Audio</span>
+                            <span>Premium ANC</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Laptops -->
+                <div class="product-card premium-card" data-id="5" data-name="MacBook Pro 16-inch M3" data-price="299999" data-image="images/macbookW.png" data-category="laptops" data-brand="apple" data-rating="4.9">
+                    <div class="product-badge new-badge">New</div>
+                    <div class="product-image">
+                        <img src="images/macbookW.png" alt="MacBook Pro">
+                        <div class="product-actions">
+                            <a href="#" class="quick-view tooltip-container">
+                                <i class="fas fa-eye"></i>
+                                <span class="tooltip">Quick View</span>
+                            </a>
+                            <a href="#" class="add-to-wishlist tooltip-container">
+                                <i class="far fa-heart"></i>
+                                <span class="tooltip">Add to Wishlist</span>
+                            </a>
+                            <a href="#" class="add-to-cart tooltip-container">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="tooltip">Add to Cart</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Laptops</div>
+                        <h3>MacBook Pro 16" M3</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(542)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">৳299,999</span>
+                            <span class="old-price">৳319,999</span>
+                        </div>
+                        <div class="product-highlights">
+                            <span>M3 Pro Chip</span>
+                            <span>36GB RAM</span>
+                            <span>Liquid Retina XDR</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-id="6" data-name="Dell XPS 13 Plus" data-price="195000" data-image="images/dell-xpsW.png" data-category="laptops" data-brand="dell" data-rating="4.6">
+                    <div class="product-image">
+                        <img src="images/dell-xpsW.png" alt="Dell XPS 13 Plus">
+                        <div class="product-actions">
+                            <a href="#" class="quick-view tooltip-container">
+                                <i class="fas fa-eye"></i>
+                                <span class="tooltip">Quick View</span>
+                            </a>
+                            <a href="#" class="add-to-wishlist tooltip-container">
+                                <i class="far fa-heart"></i>
+                                <span class="tooltip">Add to Wishlist</span>
+                            </a>
+                            <a href="#" class="add-to-cart tooltip-container">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="tooltip">Add to Cart</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Laptops</div>
+                        <h3>Dell XPS 13 Plus</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(387)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">৳195,000</span>
+                        </div>
+                        <div class="product-highlights">
+                            <span>Intel i7</span>
+                            <span>16GB RAM</span>
+                            <span>4K OLED</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tablets -->
+                <div class="product-card" data-id="7" data-name="iPad Pro 12.9-inch M2" data-price="124999" data-image="images/ipad1.png" data-category="tablets" data-brand="apple" data-rating="4.7">
+                    <div class="product-image">
+                        <img src="images/ipad1.png" alt="iPad Pro">
+                        <div class="product-actions">
+                            <a href="#" class="quick-view tooltip-container">
+                                <i class="fas fa-eye"></i>
+                                <span class="tooltip">Quick View</span>
+                            </a>
+                            <a href="#" class="add-to-wishlist tooltip-container">
+                                <i class="far fa-heart"></i>
+                                <span class="tooltip">Add to Wishlist</span>
+                            </a>
+                            <a href="#" class="add-to-cart tooltip-container">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="tooltip">Add to Cart</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Tablets</div>
+                        <h3>iPad Pro 12.9" M2</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(634)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">৳124,999</span>
+                            <span class="old-price">৳134,999</span>
+                        </div>
+                        <div class="product-highlights">
+                            <span>M2 Chip</span>
+                            <span>Liquid Retina XDR</span>
+                            <span>Apple Pencil</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Smart Watches -->
+                <div class="product-card" data-id="8" data-name="Apple Watch Ultra 2" data-price="89999" data-image="images/appwatch.png" data-category="smartwatches" data-brand="apple" data-rating="4.8">
+                    <div class="product-badge sale">-15%</div>
+                    <div class="product-image">
+                        <img src="images/appwatch.png" alt="Apple Watch Ultra">
+                        <div class="product-actions">
+                            <a href="#" class="quick-view tooltip-container">
+                                <i class="fas fa-eye"></i>
+                                <span class="tooltip">Quick View</span>
+                            </a>
+                            <a href="#" class="add-to-wishlist tooltip-container">
+                                <i class="far fa-heart"></i>
+                                <span class="tooltip">Add to Wishlist</span>
+                            </a>
+                            <a href="#" class="add-to-cart tooltip-container">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="tooltip">Add to Cart</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Wearables</div>
+                        <h3>Apple Watch Ultra 2</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(445)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">৳89,999</span>
+                            <span class="old-price">৳105,999</span>
+                        </div>
+                        <div class="product-highlights">
+                            <span>GPS + Cellular</span>
+                            <span>Action Button</span>
+                            <span>100m Water Resistant</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gaming -->
+                <div class="product-card" data-id="9" data-name="PlayStation 5" data-price="65999" data-image="images/ps5.png" data-category="gaming" data-brand="sony" data-rating="4.9">
+                    <div class="product-badge bestseller">Bestseller</div>
+                    <div class="product-image">
+                        <img src="images/ps5.png" alt="PlayStation 5">
+                        <div class="product-actions">
+                            <a href="#" class="quick-view tooltip-container">
+                                <i class="fas fa-eye"></i>
+                                <span class="tooltip">Quick View</span>
+                            </a>
+                            <a href="#" class="add-to-wishlist tooltip-container">
+                                <i class="far fa-heart"></i>
+                                <span class="tooltip">Add to Wishlist</span>
+                            </a>
+                            <a href="#" class="add-to-cart tooltip-container">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="tooltip">Add to Cart</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Gaming</div>
+                        <h3>PlayStation 5</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(2,156)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">৳65,999</span>
+                        </div>
+                        <div class="product-highlights">
+                            <span>4K Gaming</span>
+                            <span>Ray Tracing</span>
+                            <span>Ultra-Fast SSD</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cameras -->
+                <div class="product-card premium-card" data-id="10" data-name="Canon EOS R5" data-price="425000" data-image="images/CanonB.png" data-category="cameras" data-brand="canon" data-rating="4.8">
+                    <div class="product-badge new-badge">New</div>
+                    <div class="product-image">
+                        <img src="images/CanonB.png" alt="Canon EOS R5">
+                        <div class="product-actions">
+                            <a href="#" class="quick-view tooltip-container">
+                                <i class="fas fa-eye"></i>
+                                <span class="tooltip">Quick View</span>
+                            </a>
+                            <a href="#" class="add-to-wishlist tooltip-container">
+                                <i class="far fa-heart"></i>
+                                <span class="tooltip">Add to Wishlist</span>
+                            </a>
+                            <a href="#" class="add-to-cart tooltip-container">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="tooltip">Add to Cart</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Cameras</div>
+                        <h3>Canon EOS R5</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(234)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">৳425,000</span>
+                            <span class="old-price">৳445,000</span>
+                        </div>
+                        <div class="product-highlights">
+                            <span>45MP Sensor</span>
+                            <span>8K Video</span>
+                            <span>In-Body Stabilization</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accessories -->
+                <div class="product-card" data-id="11" data-name="Magic Keyboard for iPad" data-price="35999" data-image="images/keyboard.png" data-category="accessories" data-brand="apple" data-rating="4.6">
+                    <div class="product-image">
+                        <img src="images/keyboard.png" alt="Magic Keyboard">
+                        <div class="product-actions">
+                            <a href="#" class="quick-view tooltip-container">
+                                <i class="fas fa-eye"></i>
+                                <span class="tooltip">Quick View</span>
+                            </a>
+                            <a href="#" class="add-to-wishlist tooltip-container">
+                                <i class="far fa-heart"></i>
+                                <span class="tooltip">Add to Wishlist</span>
+                            </a>
+                            <a href="#" class="add-to-cart tooltip-container">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="tooltip">Add to Cart</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Accessories</div>
+                        <h3>Magic Keyboard for iPad</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(187)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">৳35,999</span>
+                            <span class="old-price">৳38,999</span>
+                        </div>
+                        <div class="product-highlights">
+                            <span>Floating Design</span>
+                            <span>Backlit Keys</span>
+                            <span>USB-C Pass-through</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-id="12" data-name="Anker PowerCore 26800" data-price="8999" data-image="images/powerbank.png" data-category="accessories" data-brand="anker" data-rating="4.7">
+                    <div class="product-image">
+                        <img src="images/powerbank.png" alt="Power Bank">
+                        <div class="product-actions">
+                            <a href="#" class="quick-view tooltip-container">
+                                <i class="fas fa-eye"></i>
+                                <span class="tooltip">Quick View</span>
+                            </a>
+                            <a href="#" class="add-to-wishlist tooltip-container">
+                                <i class="far fa-heart"></i>
+                                <span class="tooltip">Add to Wishlist</span>
+                            </a>
+                            <a href="#" class="add-to-cart tooltip-container">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="tooltip">Add to Cart</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Accessories</div>
+                        <h3>Anker PowerCore 26800</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(1,345)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">৳8,999</span>
+                            <span class="old-price">৳11,999</span>
+                        </div>
+                        <div class="product-highlights">
+                            <span>26800mAh</span>
+                            <span>Fast Charging</span>
+                            <span>3 USB Ports</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Products for variety -->
+                <div class="product-card" data-id="13" data-name="Samsung Galaxy Buds2 Pro" data-price="18999" data-image="images/samsung-budsW.png" data-category="earbuds" data-brand="samsung" data-rating="4.5">
+                    <div class="product-image">
+                        <img src="images/samsung-budsW.png" alt="Galaxy Buds2 Pro">
+                        <div class="product-actions">
+                            <a href="#" class="quick-view tooltip-container">
+                                <i class="fas fa-eye"></i>
+                                <span class="tooltip">Quick View</span>
+                            </a>
+                            <a href="#" class="add-to-wishlist tooltip-container">
+                                <i class="far fa-heart"></i>
+                                <span class="tooltip">Add to Wishlist</span>
+                            </a>
+                            <a href="#" class="add-to-cart tooltip-container">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="tooltip">Add to Cart</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Audio</div>
+                        <h3>Galaxy Buds2 Pro</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(567)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">৳18,999</span>
+                            <span class="old-price">৳21,999</span>
+                        </div>
+                        <div class="product-highlights">
+                            <span>360 Audio</span>
+                            <span>ANC</span>
+                            <span>8h Battery</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-id="14" data-name="LG UltraWide Monitor 34WK95U" data-price="85999" data-image="images/monitor.png" data-category="accessories" data-brand="lg" data-rating="4.6">
+                    <div class="product-image">
+                        <img src="images/monitor.png" alt="UltraWide Monitor">
+                        <div class="product-actions">
+                            <a href="#" class="quick-view tooltip-container">
+                                <i class="fas fa-eye"></i>
+                                <span class="tooltip">Quick View</span>
+                            </a>
+                            <a href="#" class="add-to-wishlist tooltip-container">
+                                <i class="far fa-heart"></i>
+                                <span class="tooltip">Add to Wishlist</span>
+                            </a>
+                            <a href="#" class="add-to-cart tooltip-container">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="tooltip">Add to Cart</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Accessories</div>
+                        <h3>LG UltraWide 34" Monitor</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(298)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">৳85,999</span>
+                            <span class="old-price">৳94,999</span>
+                        </div>
+                        <div class="product-highlights">
+                            <span>5K2K Display</span>
+                            <span>Thunderbolt 3</span>
+                            <span>USB-C Hub</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-id="15" data-name="Logitech MX Master 3S" data-price="12999" data-image="images/mouse.png" data-category="accessories" data-brand="logitech" data-rating="4.8">
+                    <div class="product-badge bestseller">Bestseller</div>
+                    <div class="product-image">
+                        <img src="images/mouse.png" alt="MX Master 3S">
+                        <div class="product-actions">
+                            <a href="#" class="quick-view tooltip-container">
+                                <i class="fas fa-eye"></i>
+                                <span class="tooltip">Quick View</span>
+                            </a>
+                            <a href="#" class="add-to-wishlist tooltip-container">
+                                <i class="far fa-heart"></i>
+                                <span class="tooltip">Add to Wishlist</span>
+                            </a>
+                            <a href="#" class="add-to-cart tooltip-container">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="tooltip">Add to Cart</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Accessories</div>
+                        <h3>Logitech MX Master 3S</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(1,567)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">৳12,999</span>
+                            <span class="old-price">৳15,999</span>
+                        </div>
+                        <div class="product-highlights">
+                            <span>8K DPI Sensor</span>
+                            <span>USB-C Fast Charge</span>
+                            <span>Multi-Device</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-id="16" data-name="Nintendo Switch OLED" data-price="34999" data-image="images/nintendo-switchW.png" data-category="gaming" data-brand="nintendo" data-rating="4.7">
+                    <div class="product-image">
+                        <img src="images/nintendo-switchW.png" alt="Nintendo Switch OLED">
+                        <div class="product-actions">
+                            <a href="#" class="quick-view tooltip-container">
+                                <i class="fas fa-eye"></i>
+                                <span class="tooltip">Quick View</span>
+                            </a>
+                            <a href="#" class="add-to-wishlist tooltip-container">
+                                <i class="far fa-heart"></i>
+                                <span class="tooltip">Add to Wishlist</span>
+                            </a>
+                            <a href="#" class="add-to-cart tooltip-container">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="tooltip">Add to Cart</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Gaming</div>
+                        <h3>Nintendo Switch OLED</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(1,234)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">৳34,999</span>
+                        </div>
+                        <div class="product-highlights">
+                            <span>7" OLED Screen</span>
+                            <span>Portable Gaming</span>
+                            <span>Enhanced Audio</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-id="17" data-name="Samsung Galaxy Tab S9" data-price="74999" data-image="images/samsung-tabW.png" data-category="tablets" data-brand="samsung" data-rating="4.6">
+                    <div class="product-image">
+                        <img src="images/samsung-tabW.png" alt="Galaxy Tab S9">
+                        <div class="product-actions">
+                            <a href="#" class="quick-view tooltip-container">
+                                <i class="fas fa-eye"></i>
+                                <span class="tooltip">Quick View</span>
+                            </a>
+                            <a href="#" class="add-to-wishlist tooltip-container">
+                                <i class="far fa-heart"></i>
+                                <span class="tooltip">Add to Wishlist</span>
+                            </a>
+                            <a href="#" class="add-to-cart tooltip-container">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="tooltip">Add to Cart</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Tablets</div>
+                        <h3>Samsung Galaxy Tab S9</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(445)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">৳74,999</span>
+                            <span class="old-price">৳79,999</span>
+                        </div>
+                        <div class="product-highlights">
+                            <span>Dynamic AMOLED 2X</span>
+                            <span>S Pen Included</span>
+                            <span>IP68 Rating</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-id="18" data-name="Google Pixel 8 Pro" data-price="89999" data-image="images/google-pixelW.png" data-category="phones" data-brand="google" data-rating="4.6">
+                    <div class="product-badge new-badge">New</div>
+                    <div class="product-image">
+                        <img src="images/google-pixelW.png" alt="Google Pixel 8 Pro">
+                        <div class="product-actions">
+                            <a href="#" class="quick-view tooltip-container">
+                                <i class="fas fa-eye"></i>
+                                <span class="tooltip">Quick View</span>
+                            </a>
+                            <a href="#" class="add-to-wishlist tooltip-container">
+                                <i class="far fa-heart"></i>
+                                <span class="tooltip">Add to Wishlist</span>
+                            </a>
+                            <a href="#" class="add-to-cart tooltip-container">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="tooltip">Add to Cart</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Smartphones</div>
+                        <h3>Google Pixel 8 Pro</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(678)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">৳89,999</span>
+                            <span class="old-price">৳94,999</span>
+                        </div>
+                        <div class="product-highlights">
+                            <span>Google Tensor G3</span>
+                            <span>50MP Triple Camera</span>
+                            <span>Magic Eraser</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enhanced Pagination -->
+            <div class="enhanced-pagination">
+                <button class="page-btn prev" disabled><i class="fas fa-chevron-left"></i></button>
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <span class="page-dots">...</span>
+                <button class="page-btn">8</button>
+                <button class="page-btn next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <a href="index.html">
+                        <div class="logo-text footer-logo-text">
+                            <div class="bolt-icon"><i class="fas fa-bolt"></i></div>
+                            <span class="tech">Tech</span><span class="nest">Nest</span>
+                        </div>
+                    </a>
+                </div>
+                <p>Premium tech gadgets at affordable prices. Experience innovation without breaking the bank.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Shop</h3>
+                <ul>
+                    <li><a href="category.html?category=phones">Mobile Phones</a></li>
+                    <li><a href="category.html?category=headphones">Headphones</a></li>
+                    <li><a href="category.html?category=earbuds">Earbuds</a></li>
+                    <li><a href="category.html?category=laptops">Laptops</a></li>
+                    <li><a href="category.html?category=smartwatches">Smartwatches</a></li>
+                    <li><a href="category.html?category=tablets">Tablets</a></li>
+                    <li><a href="category.html?category=accessories">Accessories</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="shipping.html">Shipping & Returns</a></li>
+                    <li><a href="warranty.html">Warranty</a></li>
+                    <li><a href="repair.html">Repair Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="press.html">Press</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> SASH, CUET, Raozan-4349, Chattogram</li>
+                    <li><i class="fas fa-phone"></i> +8801581448561</li>
+                    <li><i class="fas fa-envelope"></i> support@technest.com</li>
+                </ul>
+                <div class="payment-methods">
+                    <span class="payment-icon bkash">bKash</span>
+                    <span class="payment-icon nagad">Nagad</span>
+                    <span class="payment-icon rocket">Rocket</span>
+                    <i class="fab fa-cc-visa"></i>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TechNest. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Enhanced Quick View Modal -->
+    <div class="modal" id="quickViewModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="product-quick-view">
+                <div class="product-quick-view-image">
+                    <div class="product-badge new-badge">New</div>
+                    <div class="product-image-container">
+                        <img src="images/iphone16W.png" alt="Product" class="main-product-image">
+                    </div>
+                    
+                    <div class="product-colors">
+                        <h4>Select Color:</h4>
+                        <div class="color-options">
+                            <span class="color-option white active" data-color="white" title="White"></span>
+                            <span class="color-option black" data-color="black" title="Black"></span>
+                            <span class="color-option blue" data-color="blue" title="Blue"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-quick-view-info">
+                    <div class="product-info-scroll">
+                        <div class="product-category">Smartphones</div>
+                        <h2>iPhone 16 Pro Max</h2>
+                        
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(120 reviews)</span>
+                        </div>
+                        
+                        <div class="product-price">
+                            <span class="current-price">৳219,999</span>
+                            <span class="old-price">৳225,999</span>
+                            <span class="discount">-6%</span>
+                        </div>
+                        
+                        <div class="availability">
+                            <i class="fas fa-check-circle"></i> In Stock
+                        </div>
+                        
+                        <div class="product-description">
+                            <p>The iPhone 16 Pro Max offers cutting-edge technology with an exceptional display, advanced camera system, and lightning-fast performance. Packed with the latest A17 Bionic chip, this smartphone delivers seamless multi-tasking and incredible power efficiency.</p>
+                        </div>
+                        
+                        <div class="tech-specifications">
+                            <h4>Tech Specifications</h4>
+                            <div class="specs-grid">
+                                <div class="spec-item">
+                                    <div class="spec-icon"><i class="fas fa-microchip"></i></div>
+                                    <div class="spec-details">
+                                        <span class="spec-title">Processor</span>
+                                        <span class="spec-value">A17 Pro</span>
+                                    </div>
+                                </div>
+                                <div class="spec-item">
+                                    <div class="spec-icon"><i class="fas fa-memory"></i></div>
+                                    <div class="spec-details">
+                                        <span class="spec-title">Storage</span>
+                                        <span class="spec-value">256GB</span>
+                                    </div>
+                                </div>
+                                <div class="spec-item">
+                                    <div class="spec-icon"><i class="fas fa-mobile-alt"></i></div>
+                                    <div class="spec-details">
+                                        <span class="spec-title">Display</span>
+                                        <span class="spec-value">6.7" Super Retina XDR</span>
+                                    </div>
+                                </div>
+                                <div class="spec-item">
+                                    <div class="spec-icon"><i class="fas fa-camera"></i></div>
+                                    <div class="spec-details">
+                                        <span class="spec-title">Camera</span>
+                                        <span class="spec-value">48MP Triple Camera</span>
+                                    </div>
+                                </div>
+                                <div class="spec-item">
+                                    <div class="spec-icon"><i class="fas fa-battery-full"></i></div>
+                                    <div class="spec-details">
+                                        <span class="spec-title">Battery</span>
+                                        <span class="spec-value">4,400 mAh</span>
+                                    </div>
+                                </div>
+                                <div class="spec-item">
+                                    <div class="spec-icon"><i class="fas fa-wifi"></i></div>
+                                    <div class="spec-details">
+                                        <span class="spec-title">Connectivity</span>
+                                        <span class="spec-value">5G, Wi-Fi 6E</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-additional-info">
+                            <div class="info-item">
+                                <i class="fas fa-truck"></i>
+                                <span>Free shipping on orders over ৳5,000</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>2-year warranty included</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-undo"></i>
+                                <span>30-day money-back guarantee</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-actions-section">
+                        <div class="product-quantity">
+                            <h4>Quantity:</h4>
+                            <div class="quantity-selector">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="number" value="1" min="1" max="10">
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-actions">
+                            <button class="btn primary-btn add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                            <button class="btn secondary-btn buy-now-btn">
+                                Buy Now
+                            </button>
+                        </div>
+                        
+                        <div class="secondary-actions">
+                            <button class="btn wishlist-btn">
+                                <i class="far fa-heart"></i> Add to Wishlist
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> Your Cart</h3>
+            <span class="close-cart">&times;</span>
+        </div>
+        <div class="cart-items">
+            <div class="empty-cart">
+                <div class="empty-cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <p>Your cart is empty</p>
+                <a href="#featured" class="btn secondary-btn">Start Shopping</a>
+            </div>
+        </div>
+        <div class="cart-summary">
+            <div class="summary-row">
+                <span>Subtotal:</span>
+                <span class="cart-subtotal">৳0.00</span>
+            </div>
+            <div class="summary-row">
+                <span>Shipping:</span>
+                <span class="cart-shipping">৳0.00</span>
+            </div>
+            <div class="summary-row total">
+                <span>Total:</span>
+                <span class="cart-total">৳0.00</span>
+            </div>
+            <a href="checkout.html" class="btn primary-btn checkout-btn">Proceed to Checkout</a>
+            <button class="btn secondary-btn continue-shopping">Continue Shopping</button>
+        </div>
+    </div>
+    
+    <!-- Wishlist Sidebar -->
+    <div class="wishlist-sidebar" id="wishlistSidebar">
+        <div class="wishlist-header">
+            <h3><i class="fas fa-heart"></i> Your Wishlist</h3>
+            <span class="close-wishlist">&times;</span>
+        </div>
+        <div class="wishlist-items">
+            <div class="empty-wishlist">
+                <div class="empty-wishlist-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <p>Your wishlist is empty</p>
+                <a href="#featured" class="btn secondary-btn">Discover Products</a>
+            </div>
+        </div>
+        <div class="wishlist-actions">
+            <button class="btn primary-btn clear-wishlist-btn">Clear Wishlist</button>
+        </div>
+    </div>
+    
+    <!-- Buy Now Modal -->
+    <div class="modal" id="buyNowModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="buy-now-wrapper">
+                <h2>Quick Checkout</h2>
+                <div class="buy-now-product">
+                    <div class="buy-now-product-image">
+                        <img src="" alt="Product">
+                    </div>
+                    <div class="buy-now-product-info">
+                        <h3></h3>
+                        <div class="price-quantity">
+                            <div class="price"></div>
+                            <div class="quantity-selector">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="number" value="1" min="1" max="10">
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="buy-now-summary">
+                    <div class="summary-row">
+                        <span>Product:</span>
+                        <span class="product-name"></span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Quantity:</span>
+                        <span class="product-quantity">1</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Price:</span>
+                        <span class="product-price"></span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total:</span>
+                        <span class="product-total"></span>
+                    </div>
+                </div>
+                <div class="buy-now-actions">
+                    <a href="checkout.html" class="btn primary-btn">Proceed to Checkout</a>
+                    <button class="btn secondary-btn add-to-cart-from-buynow">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Notification Container -->
+    <div class="notification-container" id="notificationContainer"></div>
+    
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <script src="script.js"></script>
+    <script src="products.js"></script>
+</body>
+</html>

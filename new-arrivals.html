@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNest - New Arrivals | Latest Tech Products</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <meta name="theme-color" content="#0052cc">
+    <meta name="description" content="Discover the latest tech arrivals at TechNest. New smartphones, laptops, headphones, and more cutting-edge technology.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="new-arrivals.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="currency.js" defer></script>
+</head>
+<body class="tech-theme">
+
+    <!-- Header with Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <div class="logo-text">
+                        <div class="bolt-icon"><i class="fas fa-bolt"></i></div>
+                        <span class="tech">Tech</span><span class="nest">Nest</span>
+                    </div>
+                </a>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" id="closeMenu"></i>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="products.html"><i class="fas fa-shopping-bag"></i> Products</a></li>
+                    <li><a href="categories.html"><i class="fas fa-th-large"></i> Categories</a></li>
+                    <li><a href="new-arrivals.html" class="active"><i class="fas fa-star"></i> New Arrivals</a></li>
+                    <li><a href="deals.html"><i class="fas fa-tag"></i> Deals</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-actions">
+                <form class="search-container" id="searchForm">
+                    <input type="text" placeholder="Search products..." class="search-input">
+                    <button type="submit" class="search-btn"><i class="fas fa-search"></i></button>
+                </form>
+               
+                <a href="auth.html" class="account tooltip-container">
+                    <i class="fas fa-user"></i>
+                    <span class="tooltip">Account</span>
+                </a>
+                <a href="wishlist.html" class="wishlist tooltip-container" id="wishlistBtn">
+                    <i class="fas fa-heart"></i>
+                    <span class="wishlist-count">0</span>
+                    <span class="tooltip">Wishlist</span>
+                </a>
+                <a href="cart.html" class="cart tooltip-container" id="cartBtn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                    <span class="tooltip">Cart</span>
+                </a>
+            </div>
+            <i class="fas fa-bars" id="menuIcon"></i>
+        </nav>
+    </header>
+
+    <!-- Stunning Hero Section with Animations -->
+    <section class="new-arrivals-hero">
+        <div class="hero-backdrop"></div>
+        <div class="floating-elements">
+            <div class="floating-circle circle-1"></div>
+            <div class="floating-circle circle-2"></div>
+            <div class="floating-circle circle-3"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="tech-badge new-arrival-badge">
+                    <i class="fas fa-sparkles"></i>
+                    JUST ARRIVED
+                </div>
+                <h1>The Latest Tech</h1>
+                <h2 class="gradient-text">Fresh. Innovative. Amazing.</h2>
+                <p class="hero-description">
+                    Discover cutting-edge technology that just landed at TechNest. Be among the first to experience tomorrow's tech today with our exclusive new arrivals collection.
+                </p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">New Products</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">5</div>
+                        <div class="stat-label">Categories</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24h</div>
+                        <div class="stat-label">Fresh Stock</div>
+                    </div>
+                </div>
+                
+                <div class="hero-buttons">
+                    <a href="#latest-products" class="btn primary-btn pulse-animation">
+                        <i class="fas fa-rocket"></i>
+                        Explore New Arrivals
+                    </a>
+                    <a href="#featured-arrival" class="btn secondary-btn">
+                        <i class="fas fa-star"></i>
+                        View Featured
+                    </a>
+                </div>
+            </div>
+            <div class="hero-product">
+                <div class="product-showcase">
+                    <img src="images/headphoneW.png" alt="Latest Technology Devices" class="showcase-image">
+                    <div class="showcase-glow"></div>
+                    <div class="floating-badge new-badge">
+                        <i class="fas fa-bolt"></i>
+                        NEW
+                    </div>
+                    <div class="tech-particles">
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Filter Section -->
+    <section class="filter-section">
+        <div class="filter-container">
+            <div class="filter-header">
+                <h3><i class="fas fa-filter"></i> Filter Products</h3>
+                <div class="active-filters" id="activeFilters"></div>
+            </div>
+            <div class="filter-controls">
+                <div class="filter-group">
+                    <label>Categories:</label>
+                    <div class="filter-options">
+                        <button class="filter-btn active" data-filter="all">
+                            <i class="fas fa-th"></i> All
+                        </button>
+                        <button class="filter-btn" data-filter="phones">
+                            <i class="fas fa-mobile-alt"></i> Phones
+                        </button>
+                        <button class="filter-btn" data-filter="tablets">
+                            <i class="fas fa-tablet-alt"></i> Tablets
+                        </button>
+                        <button class="filter-btn" data-filter="laptops">
+                            <i class="fas fa-laptop"></i> Laptops
+                        </button>
+                        <button class="filter-btn" data-filter="audio">
+                            <i class="fas fa-headphones"></i> Audio
+                        </button>
+                        <button class="filter-btn" data-filter="wearables">
+                            <i class="fas fa-watch"></i> Wearables
+                        </button>
+                    </div>
+                </div>
+                <div class="sort-group">
+                    <label for="sort-select"><i class="fas fa-sort"></i> Sort by:</label>
+                    <select id="sort-select" class="sort-select">
+                        <option value="newest">Newest First</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="popular">Most Popular</option>
+                        <option value="rating">Highest Rated</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Products Section with Enhanced Design -->
+    <section class="latest-products" id="latest-products">
+        <div class="section-header">
+            <h2>Latest Arrivals</h2>
+            <p>Discover our newest collection of cutting-edge technology</p>
+        </div>
+
+        <div class="products-grid" id="productsGrid">
+            <!-- Product 1 - iPhone 16 Pro Max -->
+            <div class="product-card new-product" data-category="phones" data-id="1" data-name="iPhone 16 Pro Max" data-price="219999" data-image="images/iphone16W.png" data-date="2025-05-05" data-rating="4.8">
+                <div class="product-badge new-badge">Just In</div>
+                <div class="product-image">
+                    <img src="images/iphone16W.png" alt="iPhone 16 Pro Max">
+                    <div class="product-actions">
+                        <a href="#" class="quick-view tooltip-container">
+                            <i class="fas fa-eye"></i>
+                            <span class="tooltip">Quick View</span>
+                        </a>
+                        <a href="#" class="add-to-wishlist tooltip-container">
+                            <i class="far fa-heart"></i>
+                            <span class="tooltip">Add to Wishlist</span>
+                        </a>
+                        <a href="#" class="add-to-cart tooltip-container">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="tooltip">Add to Cart</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Smartphones</div>
+                    <div class="arrival-date">
+                        <i class="fas fa-calendar-alt"></i>
+                        Added 2 days ago
+                    </div>
+                    <h3>iPhone 16 Pro Max</h3>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="rating-count">(127 reviews)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">৳219,999</span>
+                        <span class="old-price">৳225,999</span>
+                    </div>
+                    <div class="product-features">
+                        <span class="feature-tag">A17 Pro</span>
+                        <span class="feature-tag">48MP Camera</span>
+                        <span class="feature-tag">6.7" Display</span>
+                    </div>
+                    <button class="btn primary-btn product-btn add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 2 - AirPods Pro 2nd Gen -->
+            <div class="product-card new-product" data-category="audio" data-id="2" data-name="AirPods Pro 2nd Gen" data-price="21499" data-image="images/airpods proW.png" data-date="2025-05-04" data-rating="4.9">
+                <div class="product-badge hot-badge">Hot</div>
+                <div class="product-image">
+                    <img src="images/airpods proW.png" alt="AirPods Pro 2nd Gen">
+                    <div class="product-actions">
+                        <a href="#" class="quick-view tooltip-container">
+                            <i class="fas fa-eye"></i>
+                            <span class="tooltip">Quick View</span>
+                        </a>
+                        <a href="#" class="add-to-wishlist tooltip-container">
+                            <i class="far fa-heart"></i>
+                            <span class="tooltip">Add to Wishlist</span>
+                        </a>
+                        <a href="#" class="add-to-cart tooltip-container">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="tooltip">Add to Cart</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Audio</div>
+                    <div class="arrival-date">
+                        <i class="fas fa-calendar-alt"></i>
+                        Added 3 days ago
+                    </div>
+                    <h3>AirPods Pro 2nd Gen</h3>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-count">(89 reviews)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">৳21,499</span>
+                        <span class="old-price">৳23,999</span>
+                    </div>
+                    <div class="product-features">
+                        <span class="feature-tag">Active NC</span>
+                        <span class="feature-tag">Spatial Audio</span>
+                        <span class="feature-tag">6h Battery</span>
+                    </div>
+                    <button class="btn primary-btn product-btn add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 3 - SmartFit Pro Ultra -->
+            <div class="product-card new-product" data-category="wearables" data-id="3" data-name="SmartFit Pro Ultra" data-price="43900" data-image="images/appwatch.png" data-date="2025-05-03" data-rating="4.6">
+                <div class="product-badge trending-badge">Trending</div>
+                <div class="product-image">
+                    <img src="images/appwatch.png" alt="SmartFit Pro Ultra">
+                    <div class="product-actions">
+                        <a href="#" class="quick-view tooltip-container">
+                            <i class="fas fa-eye"></i>
+                            <span class="tooltip">Quick View</span>
+                        </a>
+                        <a href="#" class="add-to-wishlist tooltip-container">
+                            <i class="far fa-heart"></i>
+                            <span class="tooltip">Add to Wishlist</span>
+                        </a>
+                        <a href="#" class="add-to-cart tooltip-container">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="tooltip">Add to Cart</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Wearables</div>
+                    <div class="arrival-date">
+                        <i class="fas fa-calendar-alt"></i>
+                        Added 4 days ago
+                    </div>
+                    <h3>SmartFit Pro Ultra</h3>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="rating-count">(64 reviews)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">৳43,900</span>
+                        <span class="old-price">৳47,500</span>
+                    </div>
+                    <div class="product-features">
+                        <span class="feature-tag">Health Monitor</span>
+                        <span class="feature-tag">GPS</span>
+                        <span class="feature-tag">18h Battery</span>
+                    </div>
+                    <button class="btn primary-btn product-btn add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 4 - MacBook Pro M3 -->
+            <div class="product-card new-product" data-category="laptops" data-id="4" data-name="MacBook Pro M3" data-price="230000" data-image="images/macbookW.png" data-date="2025-05-02" data-rating="4.9">
+                <div class="product-badge premium-badge">Premium</div>
+                <div class="product-image">
+                    <img src="images/macbookW.png" alt="MacBook Pro M3">
+                    <div class="product-actions">
+                        <a href="#" class="quick-view tooltip-container">
+                            <i class="fas fa-eye"></i>
+                            <span class="tooltip">Quick View</span>
+                        </a>
+                        <a href="#" class="add-to-wishlist tooltip-container">
+                            <i class="far fa-heart"></i>
+                            <span class="tooltip">Add to Wishlist</span>
+                        </a>
+                        <a href="#" class="add-to-cart tooltip-container">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="tooltip">Add to Cart</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Laptops</div>
+                    <div class="arrival-date">
+                        <i class="fas fa-calendar-alt"></i>
+                        Added 5 days ago
+                    </div>
+                    <h3>MacBook Pro M3</h3>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-count">(156 reviews)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">৳230,000</span>
+                        <span class="old-price">৳245,000</span>
+                    </div>
+                    <div class="product-features">
+                        <span class="feature-tag">M3 Pro Chip</span>
+                        <span class="feature-tag">16GB RAM</span>
+                        <span class="feature-tag">16" Display</span>
+                    </div>
+                    <button class="btn primary-btn product-btn add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 5 - iPad Pro M2 -->
+            <div class="product-card new-product" data-category="tablets" data-id="5" data-name="iPad Pro M2" data-price="92000" data-image="images/ipad1.png" data-date="2025-05-01" data-rating="4.7">
+                <div class="product-badge bestseller-badge">Bestseller</div>
+                <div class="product-image">
+                    <img src="images/ipad1.png" alt="iPad Pro M2">
+                    <div class="product-actions">
+                        <a href="#" class="quick-view tooltip-container">
+                            <i class="fas fa-eye"></i>
+                            <span class="tooltip">Quick View</span>
+                        </a>
+                        <a href="#" class="add-to-wishlist tooltip-container">
+                            <i class="far fa-heart"></i>
+                            <span class="tooltip">Add to Wishlist</span>
+                        </a>
+                        <a href="#" class="add-to-cart tooltip-container">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="tooltip">Add to Cart</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Tablets</div>
+                    <div class="arrival-date">
+                        <i class="fas fa-calendar-alt"></i>
+                        Added 1 week ago
+                    </div>
+                    <h3>iPad Pro M2</h3>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="rating-count">(203 reviews)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">৳92,000</span>
+                        <span class="old-price">৳98,000</span>
+                    </div>
+                    <div class="product-features">
+                        <span class="feature-tag">M2 Chip</span>
+                        <span class="feature-tag">12.9" Display</span>
+                        <span class="feature-tag">256GB</span>
+                    </div>
+                    <button class="btn primary-btn product-btn add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 6 - Bass Boost 3.0 Pro -->
+            <div class="product-card new-product" data-category="audio" data-id="6" data-name="Bass Boost 3.0 Pro" data-price="78500" data-image="images/headphone1.png" data-date="2025-04-30" data-rating="4.8">
+                <div class="product-badge limited-badge">Limited</div>
+                <div class="product-image">
+                    <img src="images/headphone1.png" alt="Bass Boost 3.0 Pro">
+                    <div class="product-actions">
+                        <a href="#" class="quick-view tooltip-container">
+                            <i class="fas fa-eye"></i>
+                            <span class="tooltip">Quick View</span>
+                        </a>
+                        <a href="#" class="add-to-wishlist tooltip-container">
+                            <i class="far fa-heart"></i>
+                            <span class="tooltip">Add to Wishlist</span>
+                        </a>
+                        <a href="#" class="add-to-cart tooltip-container">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="tooltip">Add to Cart</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Audio</div>
+                    <div class="arrival-date">
+                        <i class="fas fa-calendar-alt"></i>
+                        Added 1 week ago
+                    </div>
+                    <h3>Bass Boost 3.0 Pro</h3>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="rating-count">(91 reviews)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">৳78,500</span>
+                        <span class="old-price">৳85,000</span>
+                    </div>
+                    <div class="product-features">
+                        <span class="feature-tag">40h Battery</span>
+                        <span class="feature-tag">Hi-Res Audio</span>
+                        <span class="feature-tag">Active NC</span>
+                    </div>
+                    <button class="btn primary-btn product-btn add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Additional Products (Initially Hidden) -->
+            <div class="product-card new-product load-more-hidden" data-category="phones" data-id="7" data-name="Samsung Galaxy S24 Ultra" data-price="189999" data-image="images/s24W.png" data-date="2025-04-29" data-rating="4.7">
+                <div class="product-badge new-badge">New</div>
+                <div class="product-image">
+                    <img src="images/s24W.png" alt="Samsung Galaxy S24 Ultra">
+                    <div class="product-actions">
+                        <a href="#" class="quick-view tooltip-container">
+                            <i class="fas fa-eye"></i>
+                            <span class="tooltip">Quick View</span>
+                        </a>
+                        <a href="#" class="add-to-wishlist tooltip-container">
+                            <i class="far fa-heart"></i>
+                            <span class="tooltip">Add to Wishlist</span>
+                        </a>
+                        <a href="#" class="add-to-cart tooltip-container">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="tooltip">Add to Cart</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Smartphones</div>
+                    <div class="arrival-date">
+                        <i class="fas fa-calendar-alt"></i>
+                        Added 1 week ago
+                    </div>
+                    <h3>Samsung Galaxy S24 Ultra</h3>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="rating-count">(98 reviews)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">৳189,999</span>
+                        <span class="old-price">৳199,999</span>
+                    </div>
+                    <div class="product-features">
+                        <span class="feature-tag">Snapdragon 8 Gen 3</span>
+                        <span class="feature-tag">200MP Camera</span>
+                        <span class="feature-tag">6.8" Display</span>
+                    </div>
+                    <button class="btn primary-btn product-btn add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card new-product load-more-hidden" data-category="laptops" data-id="8" data-name="Dell XPS 15" data-price="165000" data-image="images/dell-xps.png" data-date="2025-04-28" data-rating="4.6">
+                <div class="product-badge premium-badge">Premium</div>
+                <div class="product-image">
+                    <img src="images/dell-xps.png" alt="Dell XPS 15">
+                    <div class="product-actions">
+                        <a href="#" class="quick-view tooltip-container">
+                            <i class="fas fa-eye"></i>
+                            <span class="tooltip">Quick View</span>
+                        </a>
+                        <a href="#" class="add-to-wishlist tooltip-container">
+                            <i class="far fa-heart"></i>
+                            <span class="tooltip">Add to Wishlist</span>
+                        </a>
+                        <a href="#" class="add-to-cart tooltip-container">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="tooltip">Add to Cart</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Laptops</div>
+                    <div class="arrival-date">
+                        <i class="fas fa-calendar-alt"></i>
+                        Added 1 week ago
+                    </div>
+                    <h3>Dell XPS 15</h3>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="rating-count">(76 reviews)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">৳165,000</span>
+                        <span class="old-price">৳175,000</span>
+                    </div>
+                    <div class="product-features">
+                        <span class="feature-tag">Intel i7</span>
+                        <span class="feature-tag">16GB RAM</span>
+                        <span class="feature-tag">15.6" 4K</span>
+                    </div>
+                    <button class="btn primary-btn product-btn add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card new-product load-more-hidden" data-category="wearables" data-id="9" data-name="Garmin Fenix 8" data-price="65000" data-image="images/garmin-fenixW.png" data-date="2025-04-27" data-rating="4.8">
+                <div class="product-badge trending-badge">Trending</div>
+                <div class="product-image">
+                    <img src="images/garmin-fenixW.png" alt="Garmin Fenix 8">
+                    <div class="product-actions">
+                        <a href="#" class="quick-view tooltip-container">
+                            <i class="fas fa-eye"></i>
+                            <span class="tooltip">Quick View</span>
+                        </a>
+                        <a href="#" class="add-to-wishlist tooltip-container">
+                            <i class="far fa-heart"></i>
+                            <span class="tooltip">Add to Wishlist</span>
+                        </a>
+                        <a href="#" class="add-to-cart tooltip-container">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="tooltip">Add to Cart</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Wearables</div>
+                    <div class="arrival-date">
+                        <i class="fas fa-calendar-alt"></i>
+                        Added 1 week ago
+                    </div>
+                    <h3>Garmin Fenix 8</h3>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="rating-count">(45 reviews)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">৳65,000</span>
+                        <span class="old-price">৳70,000</span>
+                    </div>
+                    <div class="product-features">
+                        <span class="feature-tag">Multi-Sport</span>
+                        <span class="feature-tag">GPS</span>
+                        <span class="feature-tag">22 Days Battery</span>
+                    </div>
+                    <button class="btn primary-btn product-btn add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Enhanced Load More Section -->
+        <div class="load-more-section">
+            <button class="btn secondary-btn load-more-btn" id="loadMoreBtn">
+                <i class="fas fa-plus-circle"></i>
+                Load More Products
+                <span class="btn-subtitle">3 more items available</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Enhanced Featured New Arrival -->
+    <section class="featured-arrival" id="featured-arrival">
+        <div class="section-header">
+            <h2>Featured New Arrival</h2>
+            <p>Spotlight on our most exciting new product</p>
+        </div>
+        
+        <div class="featured-container">
+            <div class="featured-image">
+                <div class="image-glow"></div>
+                <img src="images/iphone16T.png" alt="iPhone 16 Pro Max" id="featuredProductImage">
+                <div class="featured-badges">
+                    <div class="featured-badge spotlight">
+                        <i class="fas fa-crown"></i>
+                        Editor's Choice
+                    </div>
+                    <div class="featured-badge rating">
+                        <i class="fas fa-star"></i>
+                        4.9/5
+                    </div>
+                </div>
+                <div class="tech-specs-preview">
+                    <div class="spec-preview">
+                        <i class="fas fa-microchip"></i>
+                        <span>A17 Pro</span>
+                    </div>
+                    <div class="spec-preview">
+                        <i class="fas fa-camera"></i>
+                        <span>48MP</span>
+                    </div>
+                    <div class="spec-preview">
+                        <i class="fas fa-battery-full"></i>
+                        <span>29h</span>
+                    </div>
+                </div>
+            </div>
+            <div class="featured-content">
+                <div class="featured-header">
+                    <div class="product-category premium">Premium Smartphone</div>
+                    <h3>iPhone 16 Pro Max</h3>
+                    <div class="featured-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="rating-details">4.8/5 • 1,247 reviews</span>
+                    </div>
+                </div>
+                
+                <div class="featured-price">
+                    <div class="price-main price">৳219,999</div>
+                    <div class="price-details">
+                        <span class="old-price">৳225,999</span>
+                        <span class="discount-badge">Save ৳6,000</span>
+                    </div>
+                </div>
+                
+                <div class="featured-description">
+                    <p>Experience the future with the all-new iPhone 16 Pro Max. Featuring the groundbreaking A17 Pro chip, revolutionary camera system, and stunning all-day battery life that redefines what's possible.</p>
+                    
+                    <div class="key-features">
+                        <h4><i class="fas fa-sparkles"></i> Key Highlights</h4>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <i class="fas fa-mobile-alt"></i>
+                                <div>
+                                    <strong>6.9" Super Retina XDR</strong>
+                                    <p>ProMotion 120Hz display</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-microchip"></i>
+                                <div>
+                                    <strong>A17 Pro Chip</strong>
+                                    <p>6-core CPU with Neural Engine</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-camera"></i>
+                                <div>
+                                    <strong>48MP Pro Camera</strong>
+                                    <p>4x optical zoom range</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-battery-full"></i>
+                                <div>
+                                    <strong>All-Day Battery</strong>
+                                    <p>Up to 29 hours video playback</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="color-options">
+                        <h4><i class="fas fa-palette"></i> Available Colors</h4>
+                        <div class="colors">
+                            <span class="color black" data-color="Black" title="Black Titanium"></span>
+                            <span class="color titanium active" data-color="Titanium" title="Natural Titanium"></span>
+                            <span class="color blue" data-color="Blue" title="Blue Titanium"></span>
+                            <span class="color white" data-color="White" title="White Titanium"></span>
+                        </div>
+                        <span class="selected-color">Selected: <strong>Natural Titanium</strong></span>
+                    </div>
+                </div>
+                
+                <div class="featured-actions">
+                    <button class="btn primary-btn featured-add-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        Add to Cart
+                    </button>
+                    <button class="btn secondary-btn featured-buy-now">
+                        <i class="fas fa-bolt"></i>
+                        Buy Now
+                    </button>
+                    <button class="wishlist-btn featured-wishlist">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+                
+                <div class="additional-info">
+                    <div class="info-item">
+                        <i class="fas fa-truck"></i>
+                        <span>Free shipping on orders over ৳5,000</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>2-year warranty with premium support</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-undo"></i>
+                        <span>30-day hassle-free returns</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Coming Soon Section -->
+    <section class="coming-soon">
+        <div class="section-header">
+            <h2>Coming Soon</h2>
+            <p>Get ready for the next wave of innovation</p>
+        </div>
+
+        <div class="coming-soon-container">
+            <div class="coming-soon-slider" id="comingSoonSlider">
+                <!-- Slide 1 -->
+                <div class="coming-soon-slide active">
+                    <div class="coming-soon-card">
+                        <div class="coming-soon-badge countdown">
+                            <i class="fas fa-clock"></i>
+                            <span>7 Days Left</span>
+                        </div>
+                        <div class="coming-soon-image">
+                            <img src="images/VR.png" alt="VR Headset Pro">
+                            <div class="coming-soon-glow"></div>
+                        </div>
+                        <div class="coming-soon-info">
+                            <div class="product-category">Virtual Reality</div>
+                            <h3>VR Headset Pro</h3>
+                            <p>Next-generation virtual reality with ultra-high resolution, haptic feedback, and wireless freedom for the ultimate immersive experience.</p>
+                            <div class="coming-features">
+                                <span class="feature-tag">4K Display</span>
+                                <span class="feature-tag">Haptic Feedback</span>
+                                <span class="feature-tag">Wireless</span>
+                            </div>
+                            <div class="estimate-price">
+                                Est. Price: <span class="price">৳85,000</span>
+                            </div>
+                            <button class="btn secondary-btn notify-btn">
+                                <i class="fas fa-bell"></i>
+                                Notify Me
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 2 -->
+                <div class="coming-soon-slide">
+                    <div class="coming-soon-card">
+                        <div class="coming-soon-badge countdown">
+                            <i class="fas fa-clock"></i>
+                            <span>14 Days Left</span>
+                        </div>
+                        <div class="coming-soon-image">
+                            <img src="images/drone.png" alt="Sky Explorer Drone">
+                            <div class="coming-soon-glow"></div>
+                        </div>
+                        <div class="coming-soon-info">
+                            <div class="product-category">Drones</div>
+                            <h3>Sky Explorer Drone</h3>
+                            <p>Professional-grade drone with 8K camera, intelligent flight modes, and 40-minute flight time for creators and professionals.</p>
+                            <div class="coming-features">
+                                <span class="feature-tag">8K Camera</span>
+                                <span class="feature-tag">40min Flight</span>
+                                <span class="feature-tag">Obstacle Avoid</span>
+                            </div>
+                            <div class="estimate-price">
+                                Est. Price: <span class="price">৳120,000</span>
+                            </div>
+                            <button class="btn secondary-btn notify-btn">
+                                <i class="fas fa-bell"></i>
+                                Notify Me
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 3 -->
+                <div class="coming-soon-slide">
+                    <div class="coming-soon-card">
+                        <div class="coming-soon-badge countdown">
+                            <i class="fas fa-clock"></i>
+                            <span>21 Days Left</span>
+                        </div>
+                        <div class="coming-soon-image">
+                            <img src="images/shh.png" alt="Smart Home Hub">
+                            <div class="coming-soon-glow"></div>
+                        </div>
+                        <div class="coming-soon-info">
+                            <div class="product-category">Smart Home</div>
+                            <h3>Smart Home Hub</h3>
+                            <p>Central command for your smart home with AI voice assistant, touchscreen display, and seamless device integration.</p>
+                            <div class="coming-features">
+                                <span class="feature-tag">AI Assistant</span>
+                                <span class="feature-tag">Touch Display</span>
+                                <span class="feature-tag">Multi-room</span>
+                            </div>
+                            <div class="estimate-price">
+                                Est. Price: <span class="price">৳35,000</span>
+                            </div>
+                            <button class="btn secondary-btn notify-btn">
+                                <i class="fas fa-bell"></i>
+                                Notify Me
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slider-controls">
+                <button class="slider-btn prev-btn" id="prevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="slider-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                </div>
+                <button class="slider-btn next-btn" id="nextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="newsletter-container">
+            <div class="newsletter-content">
+                <div class="newsletter-icon">
+                    <i class="fas fa-paper-plane"></i>
+                </div>
+                <h2>Never Miss a New Arrival</h2>
+                <p>Be the first to know about our latest products, exclusive deals, and tech innovations. Join over 50,000+ tech enthusiasts!</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <div class="input-group">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn primary-btn">
+                            <i class="fas fa-bell"></i>
+                            Subscribe
+                        </button>
+                    </div>
+                    <div class="newsletter-benefits">
+                        <div class="benefit">
+                            <i class="fas fa-check"></i>
+                            <span>Early access to new products</span>
+                        </div>
+                        <div class="benefit">
+                            <i class="fas fa-check"></i>
+                            <span>Exclusive member discounts</span>
+                        </div>
+                        <div class="benefit">
+                            <i class="fas fa-check"></i>
+                            <span>Tech news & updates</span>
+                        </div>
+                    </div>
+                </form>
+                <div class="privacy-note">
+                    <i class="fas fa-lock"></i>
+                    We respect your privacy. Unsubscribe anytime.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <a href="index.html">
+                        <div class="logo-text footer-logo-text">
+                            <div class="bolt-icon"><i class="fas fa-bolt"></i></div>
+                            <span class="tech">Tech</span><span class="nest">Nest</span>
+                        </div>
+                    </a>
+                </div>
+                <p>Premium tech gadgets at affordable prices. Experience innovation without breaking the bank.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Shop</h3>
+                <ul>
+                    <li><a href="category.html?category=phones">Mobile Phones</a></li>
+                    <li><a href="category.html?category=headphones">Headphones</a></li>
+                    <li><a href="category.html?category=earbuds">Earbuds</a></li>
+                    <li><a href="category.html?category=laptops">Laptops</a></li>
+                    <li><a href="category.html?category=smartwatches">Smartwatches</a></li>
+                    <li><a href="category.html?category=tablets">Tablets</a></li>
+                    <li><a href="category.html?category=accessories">Accessories</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="shipping.html">Shipping & Returns</a></li>
+                    <li><a href="warranty.html">Warranty</a></li>
+                    <li><a href="repair.html">Repair Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="press.html">Press</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> SASH, CUET, Raozan-4349, Chattogram</li>
+                    <li><i class="fas fa-phone"></i> +8801581448561</li>
+                    <li><i class="fas fa-envelope"></i> support@technest.com</li>
+                </ul>
+                <div class="payment-methods">
+                    <span class="payment-icon bkash">bKash</span>
+                    <span class="payment-icon nagad">Nagad</span>
+                    <span class="payment-icon rocket">Rocket</span>
+                    <i class="fab fa-cc-visa"></i>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TechNest. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Enhanced Quick View Modal -->
+    <div class="modal" id="quickViewModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="product-quick-view">
+                <div class="product-quick-view-image">
+                    <div class="product-badge new-badge">New</div>
+                    <div class="product-image-container">
+                        <img src="images/iphone16W.png" alt="Product" class="main-product-image">
+                    </div>
+                    <div class="product-colors">
+                        <h4>Select Color:</h4>
+                        <div class="color-options">
+                            <span class="color-option white active" data-color="white" title="White"></span>
+                            <span class="color-option black" data-color="black" title="Black"></span>
+                            <span class="color-option blue" data-color="blue" title="Blue"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-quick-view-info">
+                    <div class="product-info-scroll">
+                        <div class="product-category">Smartphones</div>
+                        <h2>iPhone 16 Pro Max</h2>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(120 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">৳219,999</span>
+                            <span class="old-price">৳225,999</span>
+                            <span class="discount">-6%</span>
+                        </div>
+                        <div class="availability">
+                            <i class="fas fa-check-circle"></i> In Stock
+                        </div>
+                        <div class="product-description">
+                            <p>The iPhone 16 Pro Max offers cutting-edge technology with exceptional display, advanced camera system, and lightning-fast performance.</p>
+                        </div>
+                        <div class="tech-specifications">
+                            <h4>Tech Specifications</h4>
+                            <div class="specs-grid">
+                                <div class="spec-item">
+                                    <div class="spec-icon"><i class="fas fa-microchip"></i></div>
+                                    <div class="spec-details">
+                                        <span class="spec-title">Processor</span>
+                                        <span class="spec-value">A17 Pro</span>
+                                    </div>
+                                </div>
+                                <div class="spec-item">
+                                    <div class="spec-icon"><i class="fas fa-memory"></i></div>
+                                    <div class="spec-details">
+                                        <span class="spec-title">Storage</span>
+                                        <span class="spec-value">256GB</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-additional-info">
+                            <div class="info-item">
+                                <i class="fas fa-truck"></i>
+                                <span>Free shipping on orders over ৳5,000</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>2-year warranty included</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-actions-section">
+                        <div class="product-quantity">
+                            <h4>Quantity:</h4>
+                            <div class="quantity-selector">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="number" value="1" min="1" max="10">
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn primary-btn add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                            <button class="btn secondary-btn buy-now-btn">
+                                <i class="fas fa-bolt"></i> Buy Now
+                            </button>
+                        </div>
+                        <div class="secondary-actions">
+                            <button class="btn wishlist-btn">
+                                <i class="far fa-heart"></i> Add to Wishlist
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> Your Cart</h3>
+            <span class="close-cart">&times;</span>
+        </div>
+        <div class="cart-items">
+            <div class="empty-cart">
+                <div class="empty-cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <p>Your cart is empty</p>
+                <a href="products.html" class="btn secondary-btn">Start Shopping</a>
+            </div>
+        </div>
+        <div class="cart-summary">
+            <div class="summary-row">
+                <span>Subtotal:</span>
+                <span class="cart-subtotal">৳0.00</span>
+            </div>
+            <div class="summary-row">
+                <span>Shipping:</span>
+                <span class="cart-shipping">৳0.00</span>
+            </div>
+            <div class="summary-row total">
+                <span>Total:</span>
+                <span class="cart-total">৳0.00</span>
+            </div>
+            <a href="checkout.html" class="btn primary-btn checkout-btn">Proceed to Checkout</a>
+            <button class="btn secondary-btn continue-shopping">Continue Shopping</button>
+        </div>
+    </div>
+    
+    <!-- Wishlist Sidebar -->
+    <div class="wishlist-sidebar" id="wishlistSidebar">
+        <div class="wishlist-header">
+            <h3><i class="fas fa-heart"></i> Your Wishlist</h3>
+            <span class="close-wishlist">&times;</span>
+        </div>
+        <div class="wishlist-items">
+            <div class="empty-wishlist">
+                <div class="empty-wishlist-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <p>Your wishlist is empty</p>
+                <a href="#latest-products" class="btn secondary-btn">Discover Products</a>
+            </div>
+        </div>
+        <div class="wishlist-actions">
+            <button class="btn primary-btn clear-wishlist-btn">Clear Wishlist</button>
+        </div>
+    </div>
+    
+    <!-- Notify Modal -->
+    <div class="modal" id="notifyModal">
+        <div class="modal-content notify-modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="notify-content">
+                <div class="notify-icon">
+                    <i class="fas fa-bell"></i>
+                </div>
+                <h3>Get Notified</h3>
+                <p>We'll send you an email when this product becomes available</p>
+                <form class="notify-form">
+                    <div class="form-group">
+                        <label for="notify-email">Email Address</label>
+                        <input type="email" id="notify-email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="notify-checkbox">
+                            Also notify me about other new arrivals and special offers
+                        </label>
+                    </div>
+                    <button type="submit" class="btn primary-btn">
+                        <i class="fas fa-bell"></i>
+                        Notify Me
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Loading new products...</p>
+        </div>
+    </div>
+    
+    <!-- Notification Container -->
+    <div class="notification-container" id="notificationContainer"></div>
+    
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <script src="script.js"></script>
+    <script src="new-arrivals.js"></script>
+</body>
+</html>

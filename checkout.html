@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNest - Checkout</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <meta name="theme-color" content="#0052cc">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="tech-theme">
+    <!-- Header with Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <div class="logo-text">
+                        <div class="bolt-icon"><i class="fas fa-bolt"></i></div>
+                        <span class="tech">Tech</span><span class="nest">Nest</span>
+                    </div>
+                </a>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" id="closeMenu"></i>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="products.html"><i class="fas fa-shopping-bag"></i> Products</a></li>
+                    <li><a href="categories.html"><i class="fas fa-th-large"></i> Categories</a></li>
+                    <li><a href="new-arrivals.html"><i class="fas fa-star"></i> New Arrivals</a></li>
+                    <li><a href="deals.html"><i class="fas fa-tag"></i> Deals</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-actions">
+                <form class="search-container" id="searchForm">
+                    <input type="text" placeholder="Search products..." class="search-input">
+                    <button type="submit" class="search-btn"><i class="fas fa-search"></i></button>
+                </form>
+               
+                <a href="auth.html" class="account tooltip-container">
+                    <i class="fas fa-user"></i>
+                    <span class="tooltip">Account</span>
+                </a>
+                <a href="#" class="wishlist tooltip-container" id="wishlistBtn">
+                    <i class="fas fa-heart"></i>
+                    <span class="wishlist-count">0</span>
+                    <span class="tooltip">Wishlist</span>
+                </a>
+                <a href="#" class="cart tooltip-container" id="cartBtn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="header-cart-count">0</span>
+                    <span class="tooltip">Cart</span>
+                </a>
+            </div>
+            <i class="fas fa-bars" id="menuIcon"></i>
+        </nav>
+    </header>
+
+    <!-- Enhanced Breadcrumb Navigation -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#" id="cartLink">Cart</a></li>
+                <li class="active">Checkout</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Checkout Section with Modern Design -->
+    <section class="checkout-container">
+        <div class="checkout-wrapper">
+            <!-- Animated Checkout Progress -->
+            <div class="checkout-progress">
+                <div class="progress-step active" data-step="1">
+                    <div class="step-icon"><i class="fas fa-shopping-cart"></i></div>
+                    <div class="step-label">Cart</div>
+                </div>
+                <div class="progress-line active"></div>
+                <div class="progress-step active" data-step="2">
+                    <div class="step-icon"><i class="fas fa-address-card"></i></div>
+                    <div class="step-label">Information</div>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="3">
+                    <div class="step-icon"><i class="fas fa-truck"></i></div>
+                    <div class="step-label">Shipping</div>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="4">
+                    <div class="step-icon"><i class="fas fa-credit-card"></i></div>
+                    <div class="step-label">Payment</div>
+                </div>
+            </div>
+
+            <div class="checkout-content">
+                <!-- Checkout Main Form with Enhanced Styling -->
+                <div class="checkout-main">
+                    <h2><i class="fas fa-shipping-fast"></i> Shipping Information</h2>
+                    
+                    <form id="checkout-form">
+                        <div class="form-section">
+                            <h3><i class="fas fa-envelope"></i> Contact Information</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email <span class="required">*</span></label>
+                                    <input type="email" id="email" name="email" required placeholder="yourname@example.com">
+                                    <small class="form-help">We'll send your receipt to this email</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone <span class="required">*</span></label>
+                                    <input type="tel" id="phone" name="phone" required placeholder="01712345678">
+                                    <small class="form-help">For delivery-related communications</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3><i class="fas fa-map-marker-alt"></i> Shipping Address</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstname">First Name <span class="required">*</span></label>
+                                    <input type="text" id="firstname" name="firstname" required placeholder="John">
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastname">Last Name <span class="required">*</span></label>
+                                    <input type="text" id="lastname" name="lastname" required placeholder="Doe">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Address <span class="required">*</span></label>
+                                <input type="text" id="address" name="address" required placeholder="House/Building number, Street">
+                            </div>
+                            <div class="form-group">
+                                <label for="apartment">Apartment, suite, etc. (optional)</label>
+                                <input type="text" id="apartment" name="apartment" placeholder="Apartment or unit number">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city">City <span class="required">*</span></label>
+                                    <input type="text" id="city" name="city" required placeholder="City name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="state">State/Province <span class="required">*</span></label>
+                                    <select id="state" name="state" required>
+                                        <option value="">Select a state/province</option>
+                                        <option value="dhaka">Dhaka</option>
+                                        <option value="chittagong">Chittagong</option>
+                                        <option value="rajshahi">Rajshahi</option>
+                                        <option value="khulna">Khulna</option>
+                                        <option value="barishal">Barishal</option>
+                                        <option value="sylhet">Sylhet</option>
+                                        <option value="rangpur">Rangpur</option>
+                                        <option value="mymensingh">Mymensingh</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="zipcode">Postal/Zip Code <span class="required">*</span></label>
+                                    <input type="text" id="zipcode" name="zipcode" required placeholder="1000">
+                                </div>
+                                <div class="form-group">
+                                    <label for="country">Country <span class="required">*</span></label>
+                                    <select id="country" name="country" required>
+                                        <option value="bangladesh" selected>Bangladesh</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3><i class="fas fa-truck-loading"></i> Delivery Options</h3>
+                            <div class="shipping-methods">
+                                <div class="shipping-method">
+                                    <input type="radio" id="inside-dhaka" name="delivery-location" value="inside-dhaka" checked>
+                                    <label for="inside-dhaka">
+                                        <div class="method-info">
+                                            <div class="method-title">Inside Dhaka</div>
+                                            <div class="method-description">Delivers in 2-3 business days</div>
+                                        </div>
+                                        <div class="method-price">৳60</div>
+                                    </label>
+                                </div>
+                                <div class="shipping-method">
+                                    <input type="radio" id="outside-dhaka" name="delivery-location" value="outside-dhaka">
+                                    <label for="outside-dhaka">
+                                        <div class="method-info">
+                                            <div class="method-title">Outside Dhaka</div>
+                                            <div class="method-description">Delivers in 3-5 business days</div>
+                                        </div>
+                                        <div class="method-price">৳150</div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3><i class="fas fa-info-circle"></i> Additional Information</h3>
+                            <div class="form-group">
+                                <label for="notes">Order notes (optional)</label>
+                                <textarea id="notes" name="notes" rows="3" placeholder="Special instructions for delivery or additional details"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="checkout-actions">
+                            <a href="index.html" class="btn secondary-btn" id="return-to-cart">
+                                <i class="fas fa-arrow-left"></i> Return to Cart
+                            </a>
+                            <button type="button" class="btn primary-btn" id="proceed-payment">
+                                Continue to Payment <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Enhanced Order Summary -->
+                <div class="checkout-sidebar">
+                    <div class="order-summary">
+                        <h3>Order Summary <span class="order-count" id="order-count">(0 items)</span></h3>
+                        
+                        <div class="order-items" id="checkout-order-items">
+                            <!-- Order items will be populated dynamically from cart -->
+                            <div class="empty-order-items">
+                                <div class="empty-cart-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                                <p>No items in cart. Please add products first.</p>
+                                <a href="index.html" class="btn secondary-btn">Return to Shop</a>
+                            </div>
+                        </div>
+                        
+                        <div class="have-coupon">
+                            <i class="fas fa-tag"></i>
+                            <a href="#" id="coupon-toggle">Have a coupon code?</a>
+                        </div>
+                        
+                        <div class="coupon-form">
+                            <div class="coupon-input">
+                                <input type="text" placeholder="Enter coupon code">
+                                <button type="button" class="btn secondary-btn">Apply</button>
+                            </div>
+                        </div>
+                        
+                        <div class="order-totals">
+                            <div class="total-row">
+                                <span>Subtotal</span>
+                                <span id="checkout-subtotal">৳0.00</span>
+                            </div>
+                            <div class="total-row">
+                                <span>Delivery Fee</span>
+                                <span id="checkout-delivery">৳60.00</span>
+                            </div>
+                            <div class="total-row final-total">
+                                <span>Total</span>
+                                <span id="checkout-total">৳60.00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="secure-checkout">
+                        <div class="secure-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <p>Secure Checkout - We use industry-standard encryption to protect your information.</p>
+                    </div>
+
+                    <div class="payment-methods-accepted">
+                        <p>We Accept:</p>
+                        <div class="payment-icons">
+                            <span class="payment-icon bkash">bKash</span>
+                            <span class="payment-icon nagad">Nagad</span>
+                            <span class="payment-icon rocket">Rocket</span>
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Payment Modal -->
+    <div class="modal" id="paymentModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="payment-wrapper">
+                <h2><i class="fas fa-credit-card"></i> Select Payment Method</h2>
+                
+                <div class="payment-options">
+                    <div class="payment-option">
+                        <input type="radio" id="payment-bkash" name="payment-method" value="bkash">
+                        <label for="payment-bkash">
+                            <span class="payment-icon bkash">bKash</span>
+                            <span class="payment-name">bKash Mobile Banking</span>
+                        </label>
+                    </div>
+                    
+                    <div class="payment-option">
+                        <input type="radio" id="payment-nagad" name="payment-method" value="nagad">
+                        <label for="payment-nagad">
+                            <span class="payment-icon nagad">Nagad</span>
+                            <span class="payment-name">Nagad</span>
+                        </label>
+                    </div>
+                    
+                    <div class="payment-option">
+                        <input type="radio" id="payment-rocket" name="payment-method" value="rocket">
+                        <label for="payment-rocket">
+                            <span class="payment-icon rocket">Rocket</span>
+                            <span class="payment-name">Rocket</span>
+                        </label>
+                    </div>
+                    
+                    <div class="payment-option">
+                        <input type="radio" id="payment-card" name="payment-method" value="card" checked>
+                        <label for="payment-card">
+                            <i class="fab fa-cc-visa"></i>
+                            <span class="payment-name">Credit/Debit Card</span>
+                        </label>
+                    </div>
+                    
+                    <div class="payment-option">
+                        <input type="radio" id="payment-cod" name="payment-method" value="cod">
+                        <label for="payment-cod">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <span class="payment-name">Cash on Delivery</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="payment-form" id="card-payment-form">
+                    <div class="form-group">
+                        <label for="card-number">Card Number <span class="required">*</span></label>
+                        <div class="card-input">
+                            <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required>
+                            <div class="card-icons">
+                                <i class="fab fa-cc-visa"></i>
+                                <i class="fab fa-cc-mastercard"></i>
+                                <i class="fab fa-cc-amex"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="card-expiry">Expiration Date <span class="required">*</span></label>
+                            <input type="text" id="card-expiry" placeholder="MM/YY" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="card-cvv">CVV <span class="required">*</span></label>
+                            <input type="text" id="card-cvv" placeholder="123" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="card-name">Name on Card <span class="required">*</span></label>
+                        <input type="text" id="card-name" placeholder="John Doe" required>
+                    </div>
+                </div>
+                
+                <div class="payment-form" id="mobile-payment-form" style="display: none;">
+                    <div class="form-group">
+                        <label for="mobile-number">Mobile Number <span class="required">*</span></label>
+                        <input type="text" id="mobile-number" placeholder="01700000000" required>
+                    </div>
+                </div>
+                
+                <div class="payment-form" id="cod-payment-form" style="display: none;">
+                    <div class="cod-info">
+                        <i class="fas fa-info-circle"></i>
+                        <p>You will pay upon delivery of your order. Our delivery personnel will accept cash payment.</p>
+                    </div>
+                </div>
+                
+                <div class="payment-actions">
+                    <button type="button" class="btn secondary-btn" id="back-to-shipping">
+                        <i class="fas fa-arrow-left"></i> Back to Shipping
+                    </button>
+                    <button type="button" class="btn primary-btn" id="place-order">
+                        Place Order <i class="fas fa-check"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enhanced Order Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content success-modal">
+            <span class="close-modal">&times;</span>
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Order Placed Successfully!</h2>
+            <p>Your order #TN87654321 has been confirmed.</p>
+            <p>We've sent a confirmation email to <span id="confirmation-email">example@email.com</span></p>
+            
+            <div class="order-details">
+                <h3>Order Details</h3>
+                <div class="detail-row">
+                    <span>Order Number:</span>
+                    <span>TN87654321</span>
+                </div>
+                <div class="detail-row">
+                    <span>Order Date:</span>
+                    <span id="order-date">May 23, 2025</span>
+                </div>
+                <div class="detail-row">
+                    <span>Payment Method:</span>
+                    <span id="payment-method-display">Credit Card</span>
+                </div>
+                <div class="detail-row">
+                    <span>Order Total:</span>
+                    <span id="success-order-total">৳0.00</span>
+                </div>
+            </div>
+            
+            <div class="success-actions">
+                <a href="index.html" class="btn secondary-btn">
+                    <i class="fas fa-shopping-bag"></i> Continue Shopping
+                </a>
+                <a href="#" class="btn primary-btn">
+                    <i class="fas fa-file-alt"></i> View Order
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wishlist Sidebar -->
+    <div class="wishlist-sidebar" id="wishlistSidebar">
+        <div class="wishlist-header">
+            <h3><i class="fas fa-heart"></i> Your Wishlist</h3>
+            <span class="close-wishlist">&times;</span>
+        </div>
+        <div class="wishlist-items">
+            <!-- Wishlist items will be added dynamically -->
+            <!-- Empty wishlist message -->
+            <div class="empty-wishlist">
+                <div class="empty-wishlist-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <p>Your wishlist is empty</p>
+                <a href="index.html#featured" class="btn secondary-btn">Discover Products</a>
+            </div>
+        </div>
+        <div class="wishlist-actions">
+            <button class="btn primary-btn clear-wishlist-btn">Clear Wishlist</button>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> Your Cart</h3>
+            <span class="close-cart">&times;</span>
+        </div>
+        <div class="cart-items">
+            <!-- Cart items will be added dynamically -->
+            <!-- Empty cart message -->
+            <div class="empty-cart">
+                <div class="empty-cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <p>Your cart is empty</p>
+                <a href="index.html#featured" class="btn secondary-btn">Start Shopping</a>
+            </div>
+        </div>
+        <div class="cart-summary">
+            <div class="summary-row">
+                <span>Subtotal:</span>
+                <span class="cart-subtotal">৳0.00</span>
+            </div>
+            <div class="summary-row">
+                <span>Shipping:</span>
+                <span class="cart-shipping">৳0.00</span>
+            </div>
+            <div class="summary-row total">
+                <span>Total:</span>
+                <span id="sidebar-cart-total">৳0.00</span>
+            </div>
+            <a href="checkout.html" class="btn primary-btn checkout-btn">Proceed to Checkout</a>
+            <button class="btn secondary-btn continue-shopping">Continue Shopping</button>
+        </div>
+    </div>
+    
+    <!-- Notification Toast -->
+    <div class="notification-container" id="notificationContainer"></div>
+    
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <script src="script.js"></script>
+    <script src="checkout.js"></script>
+    <script src="products.js"></script>
+</body>
+</html>
