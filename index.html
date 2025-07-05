@@ -14,12 +14,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="currency.js" defer></script>
+    <script src="enhanced-theme.js" defer></script>
 </head>
 <body class="tech-theme">
     <!-- Enhanced Theme Toggle -->
     <div class="theme-toggle" id="themeToggle">
         <i class="fas fa-moon"></i>
         <span class="toggle-tooltip">Switch to Dark Mode</span>
+    </div>
+    
+    <!-- Theme Selector Panel -->
+    <div class="theme-selector" id="themeSelector">
+        <div class="theme-options">
+            <div class="theme-option default active" data-theme="default" title="Default Dark"></div>
+            <div class="theme-option blue" data-theme="blue" title="Blue Dark"></div>
+            <div class="theme-option purple" data-theme="purple" title="Purple Dark"></div>
+            <div class="theme-option green" data-theme="green" title="Green Dark"></div>
+        </div>
+        <div class="auto-theme-toggle">
+            <input type="checkbox" id="autoTheme">
+            <label for="autoTheme">Auto (Time-based)</label>
+        </div>
     </div>
 
     <!-- Header with Navigation -->
