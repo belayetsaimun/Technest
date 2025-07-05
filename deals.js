@@ -731,8 +731,12 @@ function toggleWishlistItem(product, button) {
 }
 
 function updateCartUI(cart) {
-    // Update cart count
-    updateCartCount(cart);
+    // Update cart count using shared utilities
+    if (window.CartUtils) {
+        window.CartUtils.updateCartCount(cart);
+    } else {
+        updateCartCount(cart);
+    }
     
     // Update cart sidebar if it exists
     const cartItems = document.querySelector('.cart-items');
@@ -742,56 +746,67 @@ function updateCartUI(cart) {
     
     if (cartItems) {
         if (cart.length === 0) {
-            // Show empty cart message
-            cartItems.innerHTML = `
-                <div class="empty-cart">
-                    <div class="empty-cart-icon">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
+            // Show empty cart message using shared utilities
+            cartItems.innerHTML = window.CartUtils ? 
+                window.CartUtils.getEmptyCartHTML('products.html', 'Start Shopping') :
+                `<div class="empty-cart">
+                    <div class="empty-cart-icon"><i class="fas fa-shopping-cart"></i></div>
                     <p>Your cart is empty</p>
                     <a href="products.html" class="btn secondary-btn">Start Shopping</a>
-                </div>
-            `;
+                </div>`;
         } else {
             // Clear cart items
             cartItems.innerHTML = '';
             
-            // Add cart items
+            // Add cart items using shared utilities
             cart.forEach(item => {
                 const cartItem = document.createElement('div');
                 cartItem.className = 'cart-item';
                 cartItem.dataset.id = item.id;
                 
-                cartItem.innerHTML = `
-                    <img src="${item.image}" alt="${item.name}">
-                    <div class="cart-item-info">
-                        <h4>${item.name}</h4>
-                        <p class="cart-item-price">৳${(item.price * item.quantity).toLocaleString('en-IN')}</p>
-                        <div class="cart-item-quantity">
-                            <button class="quantity-btn minus"><i class="fas fa-minus"></i></button>
-                            <input type="number" value="${item.quantity}" min="1" max="10">
-                            <button class="quantity-btn plus"><i class="fas fa-plus"></i></button>
+                if (window.CartUtils) {
+                    cartItem.innerHTML = window.CartUtils.createCartItemHTML(item);
+                    cartItems.appendChild(cartItem);
+                    // Setup event listeners using shared utilities
+                    window.CartUtils.setupCartItemEventListeners(cartItem, cart, () => updateCartUI(cart));
+                } else {
+                    // Fallback to original implementation
+                    cartItem.innerHTML = `
+                        <img src="${item.image}" alt="${item.name}">
+                        <div class="cart-item-info">
+                            <h4>${item.name}</h4>
+                            <p class="cart-item-price">৳${(item.price * item.quantity).toLocaleString('en-IN')}</p>
+                            <div class="cart-item-quantity">
+                                <button class="quantity-btn minus"><i class="fas fa-minus"></i></button>
+                                <input type="number" value="${item.quantity}" min="1" max="10">
+                                <button class="quantity-btn plus"><i class="fas fa-plus"></i></button>
+                            </div>
                         </div>
-                    </div>
-                    <button class="remove-item"><i class="fas fa-trash"></i></button>
-                `;
-                
-                cartItems.appendChild(cartItem);
-                
-                // Add event listeners for cart item controls
-                setupCartItemControls(cartItem);
+                        <button class="remove-item"><i class="fas fa-trash"></i></button>
+                    `;
+                    cartItems.appendChild(cartItem);
+                    setupCartItemControls(cartItem);
+                }
             });
         }
         
-        // Update totals
+        // Update totals using shared utilities
         if (cartSubtotal && cartShipping && cartTotal) {
-            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-            const shipping = subtotal > 50000 ? 0 : 150;
-            const total = subtotal + shipping;
-            
-            cartSubtotal.textContent = `৳${subtotal.toLocaleString('en-IN')}`;
-            cartShipping.textContent = shipping === 0 ? 'Free' : `৳${shipping.toLocaleString('en-IN')}`;
-            cartTotal.textContent = `৳${total.toLocaleString('en-IN')}`;
+            if (window.CartUtils) {
+                const totals = window.CartUtils.calculateTotals(cart);
+                cartSubtotal.textContent = window.CartUtils.formatCurrency(totals.subtotal);
+                cartShipping.textContent = totals.isShippingFree ? 'Free' : window.CartUtils.formatCurrency(totals.shipping);
+                cartTotal.textContent = window.CartUtils.formatCurrency(totals.total);
+            } else {
+                // Fallback to original implementation
+                const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+                const shipping = subtotal > 5000 ? 0 : 150;
+                const total = subtotal + shipping;
+                
+                cartSubtotal.textContent = `৳${subtotal.toLocaleString('en-IN')}`;
+                cartShipping.textContent = shipping === 0 ? 'Free' : `৳${shipping.toLocaleString('en-IN')}`;
+                cartTotal.textContent = `৳${total.toLocaleString('en-IN')}`;
+            }
         }
         
         // Show/hide checkout button

@@ -750,7 +750,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!cartTotal || !cartSubtotal || !cartShipping) return;
         
         const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-        const shipping = subtotal > 50000 ? 0 : 150;
+        const shipping = subtotal > 5000 ? 0 : 150;
         const total = subtotal + shipping;
         
         cartSubtotal.textContent = `৳${subtotal.toLocaleString('en-IN')}`;
