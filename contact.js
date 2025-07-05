@@ -1,8 +1,24 @@
 // Contact Page JavaScript - Enhanced with modern functionality
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize cart and wishlist
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+    // Initialize cart and wishlist with error handling
+    let cart = [];
+    let wishlist = [];
+    
+    try {
+        const savedCart = localStorage.getItem('cart');
+        cart = savedCart ? JSON.parse(savedCart) : [];
+    } catch (error) {
+        console.error('Error reading cart from localStorage:', error);
+        cart = [];
+    }
+    
+    try {
+        const savedWishlist = localStorage.getItem('wishlist');
+        wishlist = savedWishlist ? JSON.parse(savedWishlist) : [];
+    } catch (error) {
+        console.error('Error reading wishlist from localStorage:', error);
+        wishlist = [];
+    }
     
     // Update cart and wishlist counts
     updateCartCount();
@@ -562,12 +578,40 @@ document.addEventListener('DOMContentLoaded', function() {
             closeModal.addEventListener('click', closeSuccessModal);
         }
         
-        // Form validation on input
-        const formInputs = contactForm.querySelectorAll('input, select, textarea');
-        formInputs.forEach(input => {
-            input.addEventListener('blur', () => validateField(input));
-            input.addEventListener('input', () => clearFieldError(input));
-        });
+        // Setup form validation using FormUtils
+        if (window.FormUtils) {
+            const validationRules = {
+                name: [
+                    { type: 'required', message: 'Full name is required' },
+                    { type: 'name', message: 'Please enter a valid name (letters only)' }
+                ],
+                email: [
+                    { type: 'required', message: 'Email address is required' },
+                    { type: 'email', message: 'Please enter a valid email address' }
+                ],
+                phone: [
+                    { type: 'phone', message: 'Please enter a valid phone number (optional)' }
+                ],
+                subject: [
+                    { type: 'required', message: 'Please select a subject' }
+                ],
+                message: [
+                    { type: 'required', message: 'Message is required' },
+                    { type: 'minLength', value: 10, message: 'Message must be at least 10 characters long' },
+                    { type: 'maxLength', value: 500, message: 'Message cannot exceed 500 characters' }
+                ]
+            };
+            
+            // Setup real-time validation
+            window.FormUtils.setupRealTimeValidation(contactForm, validationRules);
+        } else {
+            // Fallback to existing validation
+            const formInputs = contactForm.querySelectorAll('input, select, textarea');
+            formInputs.forEach(input => {
+                input.addEventListener('blur', () => validateField(input));
+                input.addEventListener('input', () => clearFieldError(input));
+            });
+        }
         
         function handleFormSubmit() {
             const submitBtn = contactForm.querySelector('.submit-btn');
@@ -619,6 +663,39 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         function validateForm(formData) {
+            if (window.FormUtils) {
+                // Use new validation utilities
+                const validationRules = {
+                    name: [
+                        { type: 'required', message: 'Full name is required' },
+                        { type: 'name', message: 'Please enter a valid name (letters only)' }
+                    ],
+                    email: [
+                        { type: 'required', message: 'Email address is required' },
+                        { type: 'email', message: 'Please enter a valid email address' }
+                    ],
+                    phone: [
+                        { type: 'phone', message: 'Please enter a valid phone number (optional)' }
+                    ],
+                    subject: [
+                        { type: 'required', message: 'Please select a subject' }
+                    ],
+                    message: [
+                        { type: 'required', message: 'Message is required' },
+                        { type: 'minLength', value: 10, message: 'Message must be at least 10 characters long' },
+                        { type: 'maxLength', value: 500, message: 'Message cannot exceed 500 characters' }
+                    ]
+                };
+                
+                const validation = window.FormUtils.validateForm(contactForm, validationRules);
+                return validation.isValid;
+            } else {
+                // Fallback to existing validation
+                return validateFormFallback(formData);
+            }
+        }
+        
+        function validateFormFallback(formData) {
             let isValid = true;
             
             // Clear previous errors

@@ -49,9 +49,25 @@ document.addEventListener('DOMContentLoaded', function() {
     // Notification Container
     const notificationContainer = document.getElementById('notificationContainer');
     
-    // Initialize Shopping Cart and Wishlist from localStorage
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+    // Initialize Shopping Cart and Wishlist from localStorage with error handling
+    let cart = [];
+    let wishlist = [];
+    
+    try {
+        const savedCart = localStorage.getItem('cart');
+        cart = savedCart ? JSON.parse(savedCart) : [];
+    } catch (error) {
+        console.error('Error reading cart from localStorage:', error);
+        cart = [];
+    }
+    
+    try {
+        const savedWishlist = localStorage.getItem('wishlist');
+        wishlist = savedWishlist ? JSON.parse(savedWishlist) : [];
+    } catch (error) {
+        console.error('Error reading wishlist from localStorage:', error);
+        wishlist = [];
+    }
     let currentQuickViewProduct = null;
     
     // Flags to prevent duplicate event listeners
